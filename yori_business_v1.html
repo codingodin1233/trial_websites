@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#191816" />
+
+    <title>Yori Korean BBQ | Korean BBQ in Malabon</title>
+    <meta
+      name="description"
+      content="Enjoy Korean BBQ with family and friends at Yori Korean BBQ in Malabon. Explore the restaurant, discover the menu, and contact Yori to plan your visit."
+    />
+    <meta
+      name="keywords"
+      content="Yori Korean BBQ, Korean BBQ Malabon, samgyupsal Malabon, Korean restaurant Malabon, Korean food Metro Manila"
+    />
+
+    <meta
+      property="og:title"
+      content="Yori Korean BBQ | Gather Around the Grill"
+    />
+    <meta
+      property="og:description"
+      content="Good food, a warm table, and time well spent. Discover Yori Korean BBQ in Malabon."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #191816;
+        --ink-soft: #24221f;
+        --cream: #f6f1e8;
+        --paper: #fffdf8;
+        --muted: #777168;
+        --red: #a52d27;
+        --red-dark: #85221e;
+        --gold: #c49a5a;
+        --line: rgba(25, 24, 22, 0.13);
+        --serif: "Playfair Display", Georgia, serif;
+        --sans: "DM Sans", Arial, sans-serif;
+        --max: 1180px;
+        --shadow: 0 22px 60px rgba(0, 0, 0, 0.13);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: var(--sans);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+      .container {
+        width: min(var(--max), calc(100% - 48px));
+        margin-inline: auto;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.19em;
+        text-transform: uppercase;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 25px;
+        height: 1px;
+        background: currentColor;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.12;
+      }
+      h1,
+      h2 {
+        font-family: var(--serif);
+      }
+      h2 {
+        font-size: clamp(2.2rem, 4vw, 3.65rem);
+        letter-spacing: -0.035em;
+      }
+      .section-intro {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 52px;
+        padding: 0 24px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        background: var(--red);
+        color: white;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        transition: 0.2s ease;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: var(--red-dark);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        border-color: rgba(255, 255, 255, 0.55);
+        background: transparent;
+        color: white;
+      }
+      .btn-outline:hover {
+        background: white;
+        color: var(--ink);
+      }
+      .btn-dark {
+        background: var(--ink);
+      }
+      .btn-dark:hover {
+        background: #39352f;
+      }
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--red);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .text-link span {
+        transition: transform 0.2s ease;
+      }
+      .text-link:hover span {
+        transform: translateX(5px);
+      }
+
+      /* Navigation */
+      .site-header {
+        position: sticky;
+        z-index: 50;
+        top: 0;
+        background: rgba(25, 24, 22, 0.97);
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(14px);
+      }
+      .nav-wrap {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex-shrink: 0;
+      }
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+      .brand-name {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.05;
+      }
+      .brand-name strong {
+        font-family: var(--serif);
+        font-size: 1.35rem;
+        letter-spacing: 0.04em;
+      }
+      .brand-name small {
+        margin-top: 5px;
+        color: #c5b9a8;
+        font-size: 0.56rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 29px;
+      }
+      .nav-links a:not(.btn) {
+        color: #e5dfd5;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .nav-links a:not(.btn):hover {
+        color: var(--gold);
+      }
+      .nav-links .btn {
+        min-height: 43px;
+        padding-inline: 17px;
+        font-size: 0.68rem;
+      }
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+        color: white;
+        font-size: 1.35rem;
+        cursor: pointer;
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 680px;
+        overflow: hidden;
+        color: white;
+        background: var(--ink);
+      }
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(
+            90deg,
+            rgba(16, 15, 14, 0.94) 0%,
+            rgba(16, 15, 14, 0.78) 42%,
+            rgba(16, 15, 14, 0.22) 100%
+          ),
+          linear-gradient(0deg, rgba(16, 15, 14, 0.35), transparent 50%),
+          url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=2000&q=85")
+            center 54% / cover;
+        transform: scale(1.015);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: min(760px, 100%);
+        padding-block: 110px 120px;
+      }
+      .hero .eyebrow {
+        color: #e4bb7b;
+      }
+      .hero h1 {
+        max-width: 760px;
+        margin: 23px 0;
+        font-size: clamp(3.4rem, 7.6vw, 6.5rem);
+        letter-spacing: -0.055em;
+      }
+      .hero h1 em {
+        color: #e4bb7b;
+        font-style: normal;
+      }
+      .hero-copy {
+        max-width: 540px;
+        margin-bottom: 32px;
+        color: #e2ddd5;
+        font-size: 1.08rem;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+      }
+      .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-top: 55px;
+        color: #d4cabe;
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+      }
+      .hero-note::before {
+        content: "";
+        width: 42px;
+        height: 1px;
+        background: var(--gold);
+      }
+
+      /* Intro strip */
+      .intro-strip {
+        background: var(--red);
+        color: white;
+      }
+      .strip-inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-block: 24px;
+      }
+      .strip-item {
+        padding: 5px 28px;
+        border-right: 1px solid rgba(255, 255, 255, 0.24);
+      }
+      .strip-item:first-child {
+        padding-left: 0;
+      }
+      .strip-item:last-child {
+        border: 0;
+      }
+      .strip-item strong {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.18rem;
+      }
+      .strip-item span {
+        color: #f1d9d2;
+        font-size: 0.76rem;
+      }
+
+      /* Story */
+      .story {
+        padding-block: 120px;
+        background: var(--cream);
+      }
+      .story-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 85px;
+      }
+      .story-image {
+        position: relative;
+        min-height: 560px;
+      }
+      .story-image img {
+        width: 100%;
+        height: 560px;
+        object-fit: cover;
+      }
+      .image-caption {
+        position: absolute;
+        right: -25px;
+        bottom: 28px;
+        max-width: 220px;
+        padding: 22px;
+        background: var(--red);
+        color: white;
+        font-family: var(--serif);
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+      .story-copy h2 {
+        margin: 20px 0;
+      }
+      .story-copy p {
+        color: var(--muted);
+      }
+      .story-copy .btn {
+        margin-top: 17px;
+      }
+
+      /* Menu */
+      .menu-section {
+        padding-block: 115px;
+        background: var(--paper);
+      }
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 35px;
+        margin-bottom: 48px;
+      }
+      .section-heading h2 {
+        margin: 17px 0 12px;
+      }
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .menu-card {
+        background: var(--cream);
+      }
+      .menu-card img {
+        width: 100%;
+        height: 235px;
+        object-fit: cover;
+      }
+      .menu-card-body {
+        padding: 25px 25px 28px;
+      }
+      .menu-card h3 {
+        margin-bottom: 10px;
+        font-family: var(--serif);
+        font-size: 1.45rem;
+      }
+      .menu-card p {
+        min-height: 78px;
+        margin-bottom: 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .menu-note {
+        display: flex;
+        gap: 17px;
+        align-items: flex-start;
+        margin-top: 30px;
+        padding: 22px 25px;
+        border-left: 3px solid var(--gold);
+        background: #f8f4ed;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+      .menu-note strong {
+        color: var(--ink);
+      }
+
+      /* Experience */
+      .experience {
+        position: relative;
+        padding-block: 110px;
+        overflow: hidden;
+        background: var(--ink);
+        color: white;
+      }
+      .experience::after {
+        position: absolute;
+        right: -150px;
+        bottom: -260px;
+        width: 550px;
+        height: 550px;
+        border: 1px solid rgba(196, 154, 90, 0.2);
+        border-radius: 50%;
+        content: "";
+        box-shadow:
+          0 0 0 45px rgba(196, 154, 90, 0.035),
+          0 0 0 90px rgba(196, 154, 90, 0.025);
+      }
+      .experience-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 90px;
+        align-items: start;
+      }
+      .experience h2 {
+        margin: 18px 0;
+      }
+      .experience-copy {
+        color: #c6c0b7;
+      }
+      .experience-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 35px;
+      }
+      .experience-item {
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .experience-item .number {
+        color: var(--gold);
+        font-family: var(--serif);
+        font-size: 1.7rem;
+      }
+      .experience-item h3 {
+        margin: 10px 0 8px;
+        font-family: var(--serif);
+        font-size: 1.25rem;
+      }
+      .experience-item p {
+        margin: 0;
+        color: #bdb6ad;
+        font-size: 0.87rem;
+      }
+
+      /* Gallery */
+      .gallery {
+        padding-block: 110px;
+        background: var(--cream);
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr;
+        grid-template-rows: 230px 230px;
+        gap: 14px;
+      }
+      .gallery-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .gallery-grid .gallery-large {
+        grid-row: span 2;
+      }
+      .gallery-grid .gallery-wide {
+        grid-column: span 2;
+      }
+
+      /* Visit */
+      .visit {
+        padding-block: 115px;
+        background: var(--paper);
+      }
+      .visit-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 75px;
+        align-items: start;
+      }
+      .visit h2 {
+        margin: 18px 0;
+      }
+      .visit-copy {
+        color: var(--muted);
+      }
+      .contact-list {
+        margin: 35px 0;
+        border-top: 1px solid var(--line);
+      }
+      .contact-row {
+        display: grid;
+        grid-template-columns: 125px 1fr;
+        gap: 15px;
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .contact-row strong {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .contact-row span,
+      .contact-row a {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .contact-row a:hover {
+        color: var(--red);
+      }
+      .visit-card {
+        padding: 38px;
+        background: var(--cream);
+      }
+      .visit-card h3 {
+        margin: 0 0 12px;
+        font-family: var(--serif);
+        font-size: 1.8rem;
+      }
+      .visit-card p {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .visit-card .btn {
+        width: 100%;
+        margin-top: 12px;
+      }
+      .visit-card .btn + .btn {
+        margin-top: 10px;
+      }
+      .map-link {
+        display: block;
+        margin-top: 18px;
+        text-align: center;
+      }
+
+      /* CTA */
+      .final-cta {
+        position: relative;
+        padding: 90px 24px;
+        overflow: hidden;
+        background:
+          linear-gradient(rgba(135, 35, 30, 0.91), rgba(135, 35, 30, 0.94)),
+          url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1800&q=80")
+            center / cover;
+        color: white;
+        text-align: center;
+      }
+      .final-cta .eyebrow {
+        color: #f0c98f;
+      }
+      .final-cta h2 {
+        max-width: 750px;
+        margin: 20px auto;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+      }
+      .final-cta p {
+        max-width: 590px;
+        margin: 0 auto 27px;
+        color: #f2deda;
+      }
+      .final-cta .btn {
+        background: white;
+        color: var(--red-dark);
+      }
+      .final-cta .btn:hover {
+        background: var(--cream);
+      }
+
+      /* Footer */
+      footer {
+        padding: 65px 0 25px;
+        background: #151412;
+        color: white;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        gap: 55px;
+        padding-bottom: 45px;
+      }
+      .footer-about p {
+        max-width: 330px;
+        margin-top: 20px;
+        color: #aaa39a;
+        font-size: 0.88rem;
+      }
+      .footer-col h3 {
+        margin-bottom: 18px;
+        color: var(--gold);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .footer-col a,
+      .footer-col p {
+        display: block;
+        margin: 9px 0;
+        color: #c4bdb3;
+        font-size: 0.85rem;
+      }
+      .footer-col a:hover {
+        color: white;
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+        color: #888178;
+        font-size: 0.72rem;
+      }
+
+      /* Floating contact */
+      .floating-call {
+        position: fixed;
+        z-index: 40;
+        right: 22px;
+        bottom: 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 14px 18px;
+        border-radius: 50px;
+        background: var(--red);
+        color: white;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.24);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+      .floating-call:hover {
+        background: var(--red-dark);
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          gap: 17px;
+        }
+        .nav-links a:not(.btn) {
+          font-size: 0.65rem;
+        }
+        .story-grid {
+          gap: 48px;
+        }
+        .experience-grid {
+          gap: 45px;
+        }
+        .visit-grid {
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 740px) {
+        .container {
+          width: min(100% - 36px, var(--max));
+        }
+        .nav-wrap {
+          min-height: 70px;
+        }
+        .menu-toggle {
+          display: block;
+        }
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          display: none;
+          align-items: stretch;
+          gap: 0;
+          padding: 12px 22px 24px;
+          background: var(--ink);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+        }
+        .nav-links a:not(.btn) {
+          padding: 14px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          font-size: 0.75rem;
+        }
+        .nav-links .btn {
+          margin-top: 15px;
+        }
+        .hero {
+          min-height: 650px;
+        }
+        .hero::before {
+          background:
+            linear-gradient(
+              90deg,
+              rgba(16, 15, 14, 0.88),
+              rgba(16, 15, 14, 0.48)
+            ),
+            linear-gradient(0deg, rgba(16, 15, 14, 0.55), transparent),
+            url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85")
+              center / cover;
+        }
+        .hero-content {
+          padding-block: 90px;
+        }
+        .hero h1 {
+          font-size: clamp(3.1rem, 13vw, 5rem);
+        }
+        .strip-inner {
+          grid-template-columns: 1fr;
+          padding-block: 12px;
+        }
+        .strip-item,
+        .strip-item:first-child {
+          padding: 14px 0;
+          border-right: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .strip-item:last-child {
+          border-bottom: 0;
+        }
+        .story,
+        .menu-section,
+        .experience,
+        .gallery,
+        .visit {
+          padding-block: 78px;
+        }
+        .story-grid,
+        .experience-grid,
+        .visit-grid {
+          grid-template-columns: 1fr;
+        }
+        .story-grid {
+          gap: 45px;
+        }
+        .story-image {
+          min-height: 390px;
+          margin-right: 12px;
+        }
+        .story-image img {
+          height: 390px;
+        }
+        .image-caption {
+          right: -12px;
+          bottom: 18px;
+        }
+        .section-heading {
+          display: block;
+        }
+        .section-heading .text-link {
+          margin-top: 10px;
+        }
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+        .menu-card img {
+          height: 245px;
+        }
+        .menu-card p {
+          min-height: auto;
+        }
+        .experience-list {
+          gap: 25px 20px;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 220px 170px 170px;
+        }
+        .gallery-grid .gallery-large {
+          grid-row: span 2;
+        }
+        .gallery-grid .gallery-wide {
+          grid-column: span 2;
+        }
+        .visit-card {
+          padding: 28px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 35px 25px;
+        }
+        .footer-about {
+          grid-column: span 2;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 8px;
+        }
+        .floating-call {
+          right: 14px;
+          bottom: 14px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .hero-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .hero-actions .btn {
+          width: 100%;
+        }
+        .experience-list {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid {
+          grid-template-rows: 190px 145px 145px;
+        }
+        .contact-row {
+          grid-template-columns: 100px 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-about {
+          grid-column: auto;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Yori Korean BBQ home">
+          <span class="brand-mark">Y</span>
+          <span class="brand-name">
+            <strong>YORI</strong>
+            <small>Korean BBQ</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#story">Our Story</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#visit">Find Us</a>
+          <a
+            class="btn"
+            href="https://www.facebook.com/yori.mnl"
+            target="_blank"
+            rel="noopener"
+            >Contact Yori <span>↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+            <span class="eyebrow">Korean BBQ in Malabon</span>
+            <h1>Good food.<br />Great company.<br /><em>Yori moments.</em></h1>
+            <p class="hero-copy">
+              Bring your favorite people together around the table. Enjoy the
+              fun of Korean BBQ, share a meal, and make room for one more story
+              at Yori.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn"
+                href="https://www.facebook.com/yori.mnl"
+                target="_blank"
+                rel="noopener"
+                >Plan Your Visit <span>↗</span></a
+              >
+              <a class="btn btn-outline" href="#menu"
+                >Explore the Menu <span>↓</span></a
+              >
+            </div>
+            <div class="hero-note">
+              A place to gather, grill, share, and enjoy.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Restaurant highlights">
+        <div class="container strip-inner">
+          <div class="strip-item">
+            <strong>Made for sharing</strong>
+            <span>A relaxed meal with family and friends</span>
+          </div>
+          <div class="strip-item">
+            <strong>Korean BBQ experience</strong>
+            <span>Bring the table together around the grill</span>
+          </div>
+          <div class="strip-item">
+            <strong>In Malabon</strong>
+            <span>Find Yori along General Luna Street</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="container story-grid">
+          <div class="story-image">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85"
+              alt="Warm and welcoming restaurant dining atmosphere"
+              loading="lazy"
+            />
+            <div class="image-caption">
+              The best meals are the ones you share.
+            </div>
+          </div>
+
+          <div class="story-copy">
+            <span class="eyebrow">Welcome to Yori</span>
+            <h2>More than a meal. A reason to get together.</h2>
+            <p>
+              Some meals are quick stops in a busy day. Others become the part
+              of the day everyone remembers. Korean BBQ has a way of turning
+              dinner into an experience: the grill brings people together,
+              everyone gets involved, and the table becomes the center of the
+              conversation.
+            </p>
+            <p>
+              That's the spirit behind a visit to Yori Korean BBQ. Whether
+              you're catching up with friends, spending time with family, or
+              simply in the mood for Korean food, there's something special
+              about sitting down, sharing dishes, and enjoying the moment
+              together.
+            </p>
+            <p>
+              Come hungry, bring good company, and let the table do the rest. We
+              look forward to welcoming you in Malabon.
+            </p>
+            <a class="btn btn-dark" href="#visit">Visit Yori <span>→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">A taste of Yori</span>
+              <h2>Bring your appetite.</h2>
+              <p class="section-intro">
+                Korean BBQ is at its best when the table is full and everyone
+                gets to enjoy a little of everything. Explore the kinds of
+                flavours to ask about when you visit.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.facebook.com/yori.mnl"
+              target="_blank"
+              rel="noopener"
+              >Ask about the menu <span>→</span></a
+            >
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+                alt="Grilled meat prepared for a shared barbecue meal"
+                loading="lazy"
+              />
+              <div class="menu-card-body">
+                <h3>At the Grill</h3>
+                <p>
+                  The heart of Korean BBQ is the pleasure of grilling and
+                  sharing. Ask the team about the available meat selections and
+                  serving options for your table.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://www.facebook.com/yori.mnl"
+                  target="_blank"
+                  rel="noopener"
+                  >Ask what's available <span>→</span></a
+                >
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img
+                src="https://images.unsplash.com/photo-1498654896293-37a afe4?auto=format&fit=crop&w=900&q=85"
+                alt="A selection of colourful dishes served for sharing"
+                loading="lazy"
+              />
+              <div class="menu-card-body">
+                <h3>On the Side</h3>
+                <p>
+                  The little dishes around the grill help make the meal. Ask
+                  about the Korean sides and accompaniments currently available
+                  at Yori.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://www.facebook.com/yori.mnl"
+                  target="_blank"
+                  rel="noopener"
+                  >Explore the selection <span>→</span></a
+                >
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img
+                src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=85"
+                alt="Korean-inspired comfort food served at a restaurant"
+                loading="lazy"
+              />
+              <div class="menu-card-body">
+                <h3>More to Enjoy</h3>
+                <p>
+                  Looking for something beyond the grill? Check with the team
+                  for the current rice dishes, Korean favourites, drinks, and
+                  other menu options.
+                </p>
+                <a
+                  class="text-link"
+                  href="https://www.facebook.com/yori.mnl"
+                  target="_blank"
+                  rel="noopener"
+                  >Check today's options <span>→</span></a
+                >
+              </div>
+            </article>
+          </div>
+
+          <div class="menu-note">
+            <span aria-hidden="true">✦</span>
+            <div>
+              <strong>Want to see the full menu and current prices?</strong
+              ><br />
+              Menu selections and prices can change. Message Yori directly for
+              the latest menu before making your visit.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container experience-grid">
+          <div>
+            <span class="eyebrow">The Korean BBQ experience</span>
+            <h2>
+              It's not just what's on the plate. It's what happens around it.
+            </h2>
+            <p class="experience-copy">
+              Korean BBQ is a different kind of dining experience. Instead of
+              waiting for one finished dish to arrive, the meal unfolds around
+              the table. Food is shared, conversations stretch a little longer,
+              and everyone has a part in the experience.
+            </p>
+            <p class="experience-copy">
+              It's one reason Korean BBQ works so naturally for group meals,
+              celebrations, and casual catch-ups.
+            </p>
+          </div>
+
+          <div class="experience-list">
+            <article class="experience-item">
+              <span class="number">01</span>
+              <h3>Share the moment</h3>
+              <p>
+                Order for the table, pass the sides, and make the meal something
+                everyone can enjoy together.
+              </p>
+            </article>
+            <article class="experience-item">
+              <span class="number">02</span>
+              <h3>Make it social</h3>
+              <p>
+                The grill gives everyone something to enjoy while the
+                conversation carries on.
+              </p>
+            </article>
+            <article class="experience-item">
+              <span class="number">03</span>
+              <h3>Try something different</h3>
+              <p>
+                Explore Korean flavours and ask the team what they recommend
+                from the current menu.
+              </p>
+            </article>
+            <article class="experience-item">
+              <span class="number">04</span>
+              <h3>Stay for the company</h3>
+              <p>
+                Make time for the people around your table. That's what a good
+                meal is all about.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">A look around the table</span>
+              <h2>Good food brings us together.</h2>
+              <p class="section-intro">
+                A little inspiration for your next Korean BBQ get-together.
+                Check Yori's social page for the latest restaurant photos and
+                updates.
+              </p>
+            </div>
+            <a
+              class="text-link"
+              href="https://www.facebook.com/yori.mnl"
+              target="_blank"
+              rel="noopener"
+              >See Yori on Facebook <span>↗</span></a
+            >
+          </div>
+
+          <div class="gallery-grid">
+            <img
+              class="gallery-large"
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1100&q=85"
+              alt="Barbecue dishes arranged for a shared meal"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85"
+              alt="Freshly grilled meat"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=85"
+              alt="Restaurant dining room"
+              loading="lazy"
+            />
+            <img
+              class="gallery-wide"
+              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1100&q=85"
+              alt="Restaurant interior ready for guests"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="container visit-grid">
+          <div>
+            <span class="eyebrow">Come on over</span>
+            <h2>Your next Korean BBQ meal is in Malabon.</h2>
+            <p class="visit-copy">
+              Planning a meal with friends or family? Get in touch with Yori
+              before heading over to ask about current opening hours, menu
+              availability, and whether a table can be arranged for your group.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-row">
+                <strong>Address</strong>
+                <span
+                  >373 General Luna Street, Malabon, Metro Manila,
+                  Philippines</span
+                >
+              </div>
+              <div class="contact-row">
+                <strong>Phone</strong>
+                <a href="tel:+639931907086">+63 993 190 7086</a>
+              </div>
+              <div class="contact-row">
+                <strong>Facebook</strong>
+                <a
+                  href="https://www.facebook.com/yori.mnl"
+                  target="_blank"
+                  rel="noopener"
+                  >facebook.com/yori.mnl</a
+                >
+              </div>
+              <div class="contact-row">
+                <strong>Opening hours</strong>
+                <span
+                  >Please contact Yori to confirm current hours before
+                  visiting.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <aside class="visit-card">
+            <span class="eyebrow">Let's make a plan</span>
+            <h3>Got a table in mind?</h3>
+            <p>
+              Contact the restaurant to ask about availability, group
+              arrangements, and the latest menu. For the quickest response, use
+              the contact details above or send a message through Facebook.
+            </p>
+            <a class="btn" href="tel:+639931907086">Call Yori <span>↗</span></a>
+            <a
+              class="btn btn-dark"
+              href="https://www.facebook.com/yori.mnl"
+              target="_blank"
+              rel="noopener"
+              >Message on Facebook <span>↗</span></a
+            >
+            <a
+              class="text-link map-link"
+              href="https://www.google.com/maps/search/?api=1&query=373+General+Luna+Street+Malabon+Metro+Manila+Philippines"
+              target="_blank"
+              rel="noopener"
+              >Get directions <span>↗</span></a
+            >
+          </aside>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <span class="eyebrow">Save a seat for good company</span>
+        <h2>Make your next meal one worth gathering for.</h2>
+        <p>
+          Bring your people, discover the flavours, and enjoy the Korean BBQ
+          experience at Yori. Get in touch before your visit and we'll help you
+          plan.
+        </p>
+        <a
+          class="btn"
+          href="https://www.facebook.com/yori.mnl"
+          target="_blank"
+          rel="noopener"
+          >Contact Yori <span>↗</span></a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a class="brand" href="#home">
+              <span class="brand-mark">Y</span>
+              <span class="brand-name">
+                <strong>YORI</strong>
+                <small>Korean BBQ</small>
+              </span>
+            </a>
+            <p>
+              Korean BBQ, shared plates, and good company. Visit Yori Korean BBQ
+              in Malabon and make your next meal a reason to get together.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Explore</h3>
+            <a href="#story">Our Story</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#visit">Contact & Location</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Get in touch</h3>
+            <a href="tel:+639931907086">+63 993 190 7086</a>
+            <a
+              href="https://www.facebook.com/yori.mnl"
+              target="_blank"
+              rel="noopener"
+              >Facebook</a
+            >
+            <p>
+              373 General Luna Street<br />Malabon, Metro Manila, Philippines
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span
+            >© <span id="year"></span> Yori Korean BBQ. All rights
+            reserved.</span
+          >
+          <span>Good food. Great company. Yori moments.</span>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-call"
+      href="tel:+639931907086"
+      aria-label="Call Yori Korean BBQ"
+      >☎ <span>Call Yori</span></a
+    >
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation",
+        );
+        menuToggle.textContent = isOpen ? "×" : "☰";
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          menuToggle.textContent = "☰";
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

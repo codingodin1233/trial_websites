@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Speed Auto Service &amp; Repair | Gadsden, AL (DEMO)</title>
+    <meta
+      name="description"
+      content="Demo website concept for Speed Auto Service &amp; Repair, 414 N 12th St, Gadsden, Alabama."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --burgundy: #6b1f2a;
+        --burgundy-dark: #4a1520;
+        --ink: #231c1d;
+        --sign: #efeeea;
+        --paper: #fafaf8;
+        --stone: #d8d5cf;
+        --muted: #5e5758;
+        --ok: #1e6b3a;
+        --serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
+        --sans: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+        --container: 1140px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 84px;
+      }
+      body {
+        margin: 0;
+        min-width: 320px;
+        font-family: var(--sans);
+        font-size: 17px;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--paper);
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      a {
+        color: var(--burgundy);
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--serif);
+        line-height: 1.2;
+        margin: 0 0 0.5em;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(2rem, 4.6vw, 3.2rem);
+      }
+      h2 {
+        font-size: clamp(1.55rem, 3vw, 2.2rem);
+      }
+      h3 {
+        font-size: 1.15rem;
+      }
+      p {
+        margin: 0 0 1em;
+        max-width: 62ch;
+      }
+      .container {
+        width: min(100% - 40px, var(--container));
+        margin-inline: auto;
+      }
+      .section {
+        padding-block: clamp(56px, 8vw, 104px);
+      }
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: 8px;
+        background: var(--ink);
+        color: #fff;
+        padding: 10px 14px;
+        z-index: 100;
+      }
+      .skip:focus {
+        left: 8px;
+      }
+      :focus-visible {
+        outline: 3px solid var(--burgundy);
+        outline-offset: 3px;
+      }
+
+      /* demo notice */
+      .demo-bar {
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 8px 16px;
+      }
+      .demo-bar strong {
+        font-weight: 700;
+      }
+
+      /* header */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--sign);
+        border-bottom: 2px solid var(--burgundy);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 64px;
+      }
+      .brand {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: var(--burgundy);
+        text-decoration: none;
+        line-height: 1.15;
+      }
+      .nav {
+        display: none;
+        gap: 24px;
+      }
+      .nav a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      .nav a:hover {
+        color: var(--burgundy);
+        text-decoration: underline;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 12px 22px;
+        border-radius: 4px;
+        border: 2px solid var(--burgundy);
+        background: var(--burgundy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .btn:hover {
+        background: var(--burgundy-dark);
+        border-color: var(--burgundy-dark);
+      }
+      .btn.secondary {
+        background: transparent;
+        color: var(--burgundy);
+      }
+      .btn.secondary:hover {
+        background: var(--burgundy);
+        color: #fff;
+      }
+      .btn svg {
+        width: 20px;
+        height: 20px;
+        flex: none;
+      }
+      .header-call {
+        min-height: 44px;
+        padding: 8px 16px;
+      }
+
+      /* hero */
+      .hero {
+        background: var(--sign);
+        padding-block: clamp(32px, 6vw, 72px);
+      }
+      .hero-grid {
+        display: grid;
+        gap: 32px;
+        align-items: center;
+      }
+      .sign {
+        border: 3px solid var(--burgundy);
+        background: #f7f6f2;
+        padding: clamp(18px, 3vw, 30px) clamp(16px, 3vw, 32px);
+        text-align: center;
+        font-family: var(--serif);
+        font-weight: 700;
+        color: var(--burgundy);
+        margin-bottom: 28px;
+        box-shadow:
+          0 0 0 6px var(--sign),
+          0 0 0 8px var(--burgundy);
+      }
+      .sign .l1 {
+        display: block;
+        font-size: clamp(1.7rem, 6.6vw, 3.1rem);
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+      .sign .amp {
+        display: block;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        line-height: 1.2;
+      }
+      .sign .l3 {
+        display: block;
+        font-size: clamp(1.9rem, 7.4vw, 3.5rem);
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+      }
+      .hero p.lead {
+        font-size: 1.15rem;
+        color: var(--muted);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 24px 0;
+      }
+      .status-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 18px;
+        font-size: 0.95rem;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid var(--stone);
+      }
+      .badge i {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--muted);
+        display: inline-block;
+      }
+      .badge.open i {
+        background: var(--ok);
+      }
+      .badge.open {
+        color: var(--ok);
+      }
+      .photo {
+        position: relative;
+        margin: 0;
+        background: var(--stone);
+        border: 1px solid var(--stone);
+        overflow: hidden;
+      }
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .photo figcaption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(35, 28, 29, 0.82);
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+      .hero .photo {
+        aspect-ratio: 4/3;
+      }
+      .hero-copy {
+        animation: rise 0.7s ease-out both;
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* services */
+      .split {
+        display: grid;
+        gap: 32px;
+        align-items: center;
+      }
+      .split .photo {
+        aspect-ratio: 4/3;
+      }
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 24px;
+        display: grid;
+        gap: 10px;
+      }
+      .checklist li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .checklist svg {
+        width: 22px;
+        height: 22px;
+        flex: none;
+        margin-top: 3px;
+        color: var(--burgundy);
+      }
+      .demo-note {
+        border: 2px dashed var(--burgundy);
+        background: #fff;
+        padding: 14px 16px;
+        font-size: 0.92rem;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+      .demo-note strong {
+        color: var(--burgundy);
+      }
+      .statement {
+        font-family: var(--serif);
+        font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+        line-height: 1.35;
+        margin-bottom: 20px;
+        max-width: 30ch;
+      }
+
+      /* band */
+      .band {
+        position: relative;
+        margin: 0;
+        height: clamp(220px, 38vw, 420px);
+        background: var(--stone);
+        overflow: hidden;
+      }
+      .band img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .band figcaption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(35, 28, 29, 0.82);
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+
+      /* visit */
+      .visit {
+        background: var(--sign);
+      }
+      .visit-grid {
+        display: grid;
+        gap: 40px;
+      }
+      .hours {
+        width: 100%;
+        max-width: 420px;
+        border-collapse: collapse;
+      }
+      .hours th,
+      .hours td {
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--stone);
+        font-weight: 400;
+      }
+      .hours th {
+        font-weight: 600;
+      }
+      .hours td {
+        text-align: right;
+      }
+      .hours tr.today th,
+      .hours tr.today td {
+        color: var(--burgundy);
+        font-weight: 700;
+      }
+      address {
+        font-style: normal;
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+      }
+      .note {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      /* rating */
+      .rating {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px 32px;
+      }
+      .score {
+        font-family: var(--serif);
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: var(--burgundy);
+        line-height: 1;
+      }
+      .stars {
+        display: flex;
+        gap: 3px;
+        color: var(--burgundy);
+      }
+      .stars svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      /* form */
+      .request {
+        background: #fff;
+        border-top: 2px solid var(--burgundy);
+      }
+      .form-grid {
+        display: grid;
+        gap: 40px;
+      }
+      form {
+        display: grid;
+        gap: 18px;
+      }
+      .row {
+        display: grid;
+        gap: 18px;
+      }
+      label,
+      legend {
+        display: block;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+        padding: 0;
+      }
+      .hint {
+        font-weight: 400;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 48px;
+        padding: 10px 12px;
+        border: 1.5px solid #8b8584;
+        border-radius: 4px;
+        background: #fff;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+      .choices {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .choices label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+        font-weight: 500;
+        min-height: 48px;
+        padding: 8px 14px;
+        border: 1.5px solid #8b8584;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #fff;
+      }
+      .choices input {
+        width: auto;
+        min-height: 0;
+        accent-color: var(--burgundy);
+      }
+      .choices label:has(input:checked) {
+        border-color: var(--burgundy);
+        background: var(--sign);
+      }
+      .err {
+        color: #9b1c1c;
+        font-size: 0.88rem;
+        margin-top: 4px;
+        min-height: 1em;
+      }
+      input[aria-invalid="true"],
+      select[aria-invalid="true"] {
+        border-color: #9b1c1c;
+      }
+      .form-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .status {
+        padding: 14px 16px;
+        border-left: 4px solid var(--burgundy);
+        background: var(--sign);
+        font-size: 0.95rem;
+        display: none;
+        max-width: 62ch;
+      }
+      .status.show {
+        display: block;
+      }
+
+      /* footer */
+      footer {
+        background: var(--ink);
+        color: #e9e6e3;
+        padding-block: 48px 110px;
+        font-size: 0.92rem;
+      }
+      footer a {
+        color: #fff;
+      }
+      .foot-grid {
+        display: grid;
+        gap: 28px;
+      }
+      footer h2 {
+        font-size: 1.1rem;
+        color: #fff;
+      }
+      .credits {
+        margin-top: 32px;
+        padding-top: 20px;
+        border-top: 1px solid #4a4244;
+        font-size: 0.8rem;
+        color: #bdb8b5;
+      }
+
+      /* mobile bar */
+      .mobile-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: var(--sign);
+        border-top: 2px solid var(--burgundy);
+        padding-bottom: env(safe-area-inset-bottom, 0);
+      }
+      .mobile-bar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        min-height: 56px;
+        color: var(--burgundy);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+      .mobile-bar a:first-child {
+        background: var(--burgundy);
+        color: #fff;
+      }
+      .mobile-bar svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      @media (min-width: 768px) {
+        .nav {
+          display: flex;
+        }
+        .hero-grid {
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 56px;
+        }
+        .hero .photo {
+          aspect-ratio: 4/5;
+        }
+        .split {
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+        }
+        .split.flip .photo {
+          order: 2;
+        }
+        .visit-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+        }
+        .form-grid {
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 64px;
+        }
+        .row.two {
+          grid-template-columns: 1fr 1fr;
+        }
+        .row.three {
+          grid-template-columns: 1fr 1.2fr 1.2fr;
+        }
+        .foot-grid {
+          grid-template-columns: 1.2fr 1fr 1fr;
+        }
+        .mobile-bar {
+          display: none;
+        }
+        footer {
+          padding-bottom: 48px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .hero-copy {
+          animation: none;
+        }
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="demo-bar" role="note">
+      <strong>DEMO CONCEPT.</strong> Not the official site. Hours, phone and
+      rating come from public listings and are unconfirmed. Photos are
+      placeholders.
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top">Speed Auto Service &amp; Repair</a>
+        <nav class="nav" aria-label="Main">
+          <a href="#services">Services</a>
+          <a href="#visit">Hours &amp; location</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#request">Request an appointment</a>
+        </nav>
+        <a
+          class="btn header-call"
+          href="tel:+12565518283"
+          aria-label="Call Speed Auto Service and Repair at 256-551-8283"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+            />
+          </svg>
+          <span>(256) 551-8283</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="sign" aria-label="Speed Auto Service and Repair">
+              <span class="l1">Speed Auto Service</span>
+              <span class="amp">&amp;</span>
+              <span class="l3">Repair</span>
+            </div>
+            <h1>Auto service and repair in Gadsden, Alabama</h1>
+            <p class="lead">
+              Something wrong with your car? Call the shop on North 12th Street,
+              or send your vehicle details ahead and get a call back.
+            </p>
+            <div class="actions">
+              <a class="btn" href="tel:+12565518283">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+                  />
+                </svg>
+                Call (256) 551-8283
+              </a>
+              <a class="btn secondary" href="#request"
+                >Request an appointment</a
+              >
+            </div>
+            <div class="status-row">
+              <span class="badge" id="open-badge" aria-live="polite"
+                ><i></i><span>Checking hours…</span></span
+              >
+              <span>414 N 12th St, Gadsden, AL 35901</span>
+            </div>
+          </div>
+          <figure class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1771340012319-0b4fca008b54?auto=format&fit=crop&w=1200&q=70"
+              width="1200"
+              height="1500"
+              alt="Mechanic working on a car engine in a workshop (placeholder stock photo)"
+              fetchpriority="high"
+              onerror="this.style.display = 'none'"
+            />
+            <figcaption>Placeholder photo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container split">
+          <div>
+            <h2>Tell us what the car is doing</h2>
+            <p class="statement">
+              General auto service and repair, from a shop on N 12th Street.
+            </p>
+            <p>
+              You don’t need the right word for the problem. Describe what you
+              see, hear, or feel. Having these details ready makes the first
+              call quicker:
+            </p>
+            <ul class="checklist">
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span>The year, make and model of the vehicle</span>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span>What is happening, and when it started</span>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span>Any warning lights on the dashboard</span>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span>Whether the car can still be driven in</span>
+              </li>
+            </ul>
+            <p>Before any work starts, ask for the estimate in writing.</p>
+            <div class="demo-note">
+              <strong>Demo placeholder:</strong> the full service list, accepted
+              vehicle types, warranty and payment methods are still to be
+              confirmed with the owner. They are left out on purpose rather than
+              guessed.
+            </div>
+          </div>
+          <figure class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1764015805414-df7de89d405b?auto=format&fit=crop&w=1200&q=70"
+              width="1200"
+              height="900"
+              alt="Mechanic using an impact wrench on a car wheel (placeholder stock photo)"
+              loading="lazy"
+              onerror="this.style.display = 'none'"
+            />
+            <figcaption>Placeholder photo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <figure class="band">
+        <img
+          src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&fit=crop&w=1800&q=70"
+          width="1800"
+          height="900"
+          alt="Mechanics working on cars in a bright automotive repair workshop (placeholder stock photo)"
+          loading="lazy"
+          onerror="this.style.display = 'none'"
+        />
+        <figcaption>Placeholder photo</figcaption>
+      </figure>
+
+      <section class="section visit" id="visit">
+        <div class="container visit-grid">
+          <div>
+            <h2>Hours and location</h2>
+            <address>
+              Speed Auto Service &amp; Repair<br />414 N 12th St<br />Gadsden,
+              AL 35901
+            </address>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Speed+Auto+Service+%26+Repair+414+N+12th+St+Gadsden+AL+35901"
+                target="_blank"
+                rel="noopener"
+                >Get directions</a
+              >
+              <a class="btn secondary" href="tel:+12565518283">Call the shop</a>
+            </div>
+            <p class="note">
+              Hours are from the public Google listing. Call ahead to confirm,
+              especially around holidays.
+            </p>
+          </div>
+          <div>
+            <h3>Opening hours (Central Time)</h3>
+            <table class="hours" id="hours-table">
+              <tbody>
+                <tr data-d="1">
+                  <th scope="row">Monday</th>
+                  <td>9 AM – 5 PM</td>
+                </tr>
+                <tr data-d="2">
+                  <th scope="row">Tuesday</th>
+                  <td>9 AM – 5 PM</td>
+                </tr>
+                <tr data-d="3">
+                  <th scope="row">Wednesday</th>
+                  <td>9 AM – 5 PM</td>
+                </tr>
+                <tr data-d="4">
+                  <th scope="row">Thursday</th>
+                  <td>9 AM – 5 PM</td>
+                </tr>
+                <tr data-d="5">
+                  <th scope="row">Friday</th>
+                  <td>9 AM – 4 PM</td>
+                </tr>
+                <tr data-d="6">
+                  <th scope="row">Saturday</th>
+                  <td>9 AM – 4 PM</td>
+                </tr>
+                <tr data-d="0">
+                  <th scope="row">Sunday</th>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <h2>What Google shows</h2>
+          <div class="rating">
+            <div class="score" aria-label="4.7 out of 5">4.7</div>
+            <div>
+              <div class="stars" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"
+                  />
+                </svg>
+              </div>
+              <p style="margin: 6px 0 0">
+                Average rating across 17 Google reviews, as shown on the Google
+                Maps listing.
+              </p>
+              <p class="note" style="margin: 4px 0 0">
+                Demo: verify the current figure before launch. Customer quotes
+                are added only with permission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section request" id="request">
+        <div class="container form-grid">
+          <div>
+            <h2>Request an appointment</h2>
+            <p>
+              Tell the shop about your vehicle and what’s going on. The request
+              opens as a text message to the shop, filled in for you, and they
+              can call you back to set a time.
+            </p>
+            <p class="note">
+              Nothing is sent until you press send in your messages app. Texting
+              is not confirmed with the shop yet, so if you don’t hear back,
+              call (256) 551-8283.
+            </p>
+          </div>
+          <form id="request-form" novalidate>
+            <div class="row two">
+              <div>
+                <label for="name">Your name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+                <div class="err" id="err-name"></div>
+              </div>
+              <div>
+                <label for="phone">Phone number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+                <div class="err" id="err-phone"></div>
+              </div>
+            </div>
+            <div class="row three">
+              <div>
+                <label for="year">Vehicle year</label>
+                <input
+                  id="year"
+                  name="year"
+                  type="text"
+                  inputmode="numeric"
+                  maxlength="4"
+                  placeholder="2014"
+                  required
+                />
+                <div class="err" id="err-year"></div>
+              </div>
+              <div>
+                <label for="make">Make</label>
+                <input
+                  id="make"
+                  name="make"
+                  type="text"
+                  placeholder="Ford"
+                  required
+                />
+                <div class="err" id="err-make"></div>
+              </div>
+              <div>
+                <label for="model">Model</label>
+                <input
+                  id="model"
+                  name="model"
+                  type="text"
+                  placeholder="F-150"
+                  required
+                />
+                <div class="err" id="err-model"></div>
+              </div>
+            </div>
+            <fieldset>
+              <legend>What’s going on?</legend>
+              <div class="choices">
+                <label
+                  ><input
+                    type="radio"
+                    name="issue"
+                    value="Check-engine or warning light"
+                    required
+                  />
+                  Warning light</label
+                >
+                <label
+                  ><input type="radio" name="issue" value="Strange noise" />
+                  Strange noise</label
+                >
+                <label
+                  ><input type="radio" name="issue" value="Brakes" />
+                  Brakes</label
+                >
+                <label
+                  ><input type="radio" name="issue" value="Won't start" /> Won’t
+                  start</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="issue"
+                    value="Overheating or leak"
+                  />
+                  Overheating / leak</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="issue"
+                    value="Routine maintenance"
+                  />
+                  Routine service</label
+                >
+                <label
+                  ><input type="radio" name="issue" value="Something else" />
+                  Something else</label
+                >
+              </div>
+              <div class="err" id="err-issue"></div>
+            </fieldset>
+            <div>
+              <label for="details"
+                >Details
+                <span class="hint"
+                  >(when it started, sounds, lights, anything helpful)</span
+                ></label
+              >
+              <textarea id="details" name="details"></textarea>
+            </div>
+            <fieldset>
+              <legend>Can the car be driven in?</legend>
+              <div class="choices">
+                <label
+                  ><input
+                    type="radio"
+                    name="drive"
+                    value="Yes, it drives"
+                    checked
+                  />
+                  Yes, it drives</label
+                >
+                <label
+                  ><input type="radio" name="drive" value="Not sure" /> Not
+                  sure</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="drive"
+                    value="No, it can't be driven"
+                  />
+                  No, it can’t be driven</label
+                >
+              </div>
+            </fieldset>
+            <div class="row two">
+              <div>
+                <label for="day">Preferred day</label>
+                <select id="day" name="day">
+                  <option>Any day</option>
+                  <option>Monday</option>
+                  <option>Tuesday</option>
+                  <option>Wednesday</option>
+                  <option>Thursday</option>
+                  <option>Friday</option>
+                  <option>Saturday</option>
+                </select>
+              </div>
+              <div>
+                <label for="time">Preferred time</label>
+                <select id="time" name="time">
+                  <option>Any time</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn" type="submit">
+                Text my request to the shop
+              </button>
+              <button class="btn secondary" type="button" id="copy-btn">
+                Copy message
+              </button>
+            </div>
+            <div
+              class="status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <h2>Speed Auto Service &amp; Repair</h2>
+            <address style="font-size: inherit">
+              414 N 12th St<br />Gadsden, AL 35901
+            </address>
+            <p style="margin: 0">
+              <a href="tel:+12565518283">(256) 551-8283</a>
+            </p>
+          </div>
+          <div>
+            <h2>Hours</h2>
+            <p style="margin: 0">
+              Mon–Thu 9 AM – 5 PM<br />Fri–Sat 9 AM – 4 PM<br />Sun closed
+            </p>
+          </div>
+          <div>
+            <h2>Demo notice</h2>
+            <p style="margin: 0">
+              Concept site, not published by the business. Details come from
+              public listings and are unconfirmed.
+            </p>
+          </div>
+        </div>
+        <p class="credits">
+          Placeholder photos from Unsplash (Unsplash License): Dextar Studio,
+          Mehmet Talha Onuk, Lex. They do not show this business. Replace with
+          the shop’s own photos before launch.
+        </p>
+      </div>
+    </footer>
+
+    <nav class="mobile-bar" aria-label="Quick actions">
+      <a href="tel:+12565518283">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+          />
+        </svg>
+        Call
+      </a>
+      <a
+        href="https://www.google.com/maps/search/?api=1&amp;query=Speed+Auto+Service+%26+Repair+414+N+12th+St+Gadsden+AL+35901"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        Directions
+      </a>
+      <a href="#request">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="3" y="4" width="18" height="18" rx="2" />
+          <path d="M16 2v4M8 2v4M3 10h18" />
+        </svg>
+        Request
+      </a>
+    </nav>
+
+    <script>
+      (function () {
+        "use strict";
+        var TZ = "America/Chicago";
+        var PHONE = "+12565518283";
+        // day index: 0=Sun ... 6=Sat; [openMinutes, closeMinutes] or null
+        var HOURS = {
+          0: null,
+          1: [540, 1020],
+          2: [540, 1020],
+          3: [540, 1020],
+          4: [540, 1020],
+          5: [540, 960],
+          6: [540, 960],
+        };
+        var DAYNAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+        function chicagoNow() {
+          var parts = new Intl.DateTimeFormat("en-US", {
+            timeZone: TZ,
+            weekday: "short",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: false,
+          }).formatToParts(new Date());
+          var o = {};
+          parts.forEach(function (p) {
+            o[p.type] = p.value;
+          });
+          var day = DAYNAMES.indexOf(o.weekday);
+          var h = parseInt(o.hour, 10);
+          if (h === 24) h = 0;
+          return { day: day, minutes: h * 60 + parseInt(o.minute, 10) };
+        }
+        function fmt(mins) {
+          var h = Math.floor(mins / 60),
+            m = mins % 60,
+            ap = h >= 12 ? "PM" : "AM";
+          h = h % 12;
+          if (h === 0) h = 12;
+          return h + (m ? ":" + (m < 10 ? "0" : "") + m : "") + " " + ap;
+        }
+        function updateBadge() {
+          var badge = document.getElementById("open-badge");
+          var label = badge.querySelector("span");
+          var now = chicagoNow();
+          var today = HOURS[now.day];
+          var text,
+            open = false;
+          if (today && now.minutes >= today[0] && now.minutes < today[1]) {
+            open = true;
+            text = "Open now · closes " + fmt(today[1]);
+          } else {
+            var next = null,
+              offset;
+            if (today && now.minutes < today[0]) {
+              next = { d: now.day, off: 0 };
+            }
+            for (offset = 1; offset <= 7 && !next; offset++) {
+              var d = (now.day + offset) % 7;
+              if (HOURS[d]) next = { d: d, off: offset };
+            }
+            if (next.off === 0)
+              text = "Closed now · opens today " + fmt(HOURS[next.d][0]);
+            else if (next.off === 1)
+              text = "Closed now · opens tomorrow " + fmt(HOURS[next.d][0]);
+            else
+              text =
+                "Closed now · opens " +
+                DAYNAMES[next.d] +
+                " " +
+                fmt(HOURS[next.d][0]);
+          }
+          label.textContent = text;
+          badge.classList.toggle("open", open);
+          var rows = document.querySelectorAll("#hours-table tr");
+          for (var i = 0; i < rows.length; i++) {
+            rows[i].classList.toggle(
+              "today",
+              parseInt(rows[i].getAttribute("data-d"), 10) === now.day,
+            );
+          }
+        }
+        updateBadge();
+        setInterval(updateBadge, 60000);
+
+        /* Appointment request form: opens a prefilled text message. No server, nothing sent automatically. */
+        var form = document.getElementById("request-form");
+        var statusEl = document.getElementById("form-status");
+
+        function val(name) {
+          var el = form.elements[name];
+          return el ? (el.value || "").trim() : "";
+        }
+        function checked(name) {
+          var el = form.querySelector('input[name="' + name + '"]:checked');
+          return el ? el.value : "";
+        }
+        function setErr(id, msg, field) {
+          document.getElementById(id).textContent = msg;
+          if (field) field.setAttribute("aria-invalid", msg ? "true" : "false");
+        }
+        function validate() {
+          var ok = true,
+            first = null;
+          function bad(id, msg, field) {
+            setErr(id, msg, field);
+            ok = false;
+            if (!first) first = field;
+          }
+          ["name", "phone", "year", "make", "model", "issue"].forEach(
+            function (k) {
+              setErr("err-" + k, "", form.elements[k]);
+            },
+          );
+          if (!val("name"))
+            bad("err-name", "Enter your name.", form.elements.name);
+          var digits = val("phone").replace(/\D/g, "");
+          if (digits.length < 10)
+            bad(
+              "err-phone",
+              "Enter a phone number with area code.",
+              form.elements.phone,
+            );
+          if (!/^(19|20)\d{2}$/.test(val("year")))
+            bad("err-year", "Enter a 4-digit year.", form.elements.year);
+          if (!val("make"))
+            bad("err-make", "Enter the make.", form.elements.make);
+          if (!val("model"))
+            bad("err-model", "Enter the model.", form.elements.model);
+          if (!checked("issue")) {
+            document.getElementById("err-issue").textContent =
+              "Choose what’s going on.";
+            ok = false;
+            if (!first) first = form.querySelector('input[name="issue"]');
+          } else document.getElementById("err-issue").textContent = "";
+          if (first) first.focus();
+          return ok;
+        }
+        function buildMessage() {
+          var lines = [
+            "Appointment request for Speed Auto Service & Repair",
+            "Name: " + val("name"),
+            "Phone: " + val("phone"),
+            "Vehicle: " + val("year") + " " + val("make") + " " + val("model"),
+            "Problem: " + checked("issue"),
+            "Drivable: " + checked("drive"),
+            "Preferred: " + val("day") + ", " + val("time"),
+          ];
+          if (val("details")) lines.push("Details: " + val("details"));
+          return lines.join("\n");
+        }
+        function show(msg) {
+          statusEl.textContent = msg;
+          statusEl.classList.add("show");
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!validate()) return;
+          var body = encodeURIComponent(buildMessage());
+          window.location.href = "sms:" + PHONE + "?&body=" + body;
+          show(
+            "Your messages app should open with the request filled in. Nothing is sent until you press send. If nothing opened, use Copy message or call (256) 551-8283.",
+          );
+        });
+
+        document
+          .getElementById("copy-btn")
+          .addEventListener("click", function () {
+            if (!validate()) return;
+            var text = buildMessage();
+            function done() {
+              show(
+                "Message copied. Paste it into a text to (256) 551-8283, or read it out when you call.",
+              );
+            }
+            function fail() {
+              show(
+                "Couldn’t copy automatically. Select this text and copy it:\n\n" +
+                  text,
+              );
+              statusEl.style.whiteSpace = "pre-line";
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText)
+              navigator.clipboard.writeText(text).then(done, fail);
+            else fail();
+          });
+      })();
+    </script>
+  </body>
+</html>

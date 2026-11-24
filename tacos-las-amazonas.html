@@ -3,206 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#D92B2B" />
     <title>Tacos Las Amazonas Estilo Jalisco #3 — South Congress Austin</title>
-    <meta
-      name="description"
-      content="Authentic Jalisco-style street tacos, handmade corn tortillas, al pastor off the trompo, and late-night cravings on South Congress Ave, Austin, TX. Open until 3 AM Fri–Sat."
-    />
+    <meta name="description" content="Authentic Jalisco-style street tacos, handmade corn tortillas, al pastor off the trompo, late-night cravings on South Congress Ave, Austin, TX. Call (512) 210-6855." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
     <style>
-      :root {
-        --chili: #D92B2B;
-        --chili-dark: #b92424;
-        --marigold: #F4A900;
-        --marigold-dark: #c88a00;
-        --charcoal: #141414;
-        --cream: #FAF5EB;
-        --ink: #141414;
-        --muted: #6b5b4e;
-        --line: #e7d8c4;
-        --serif: "Playfair Display", Georgia, serif;
-        --sans: "DM Sans", system-ui, -apple-system, sans-serif;
-        --radius: 14px;
-      }
+      :root { --chili:#D92B2B; --chili-dark:#b92424; --marigold:#F4A900; --marigold-dark:#c88a00; --charcoal:#141414; --cream:#FAF5EB; --ink:#141414; --muted:#6b5b4e; --line:#e7d8c4; --serif:"Playfair Display",Georgia,serif; --sans:"DM Sans",system-ui,-apple-system,sans-serif; --max:1180px; --radius:14px; }
       * { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; }
-      body {
-        color: var(--ink);
-        background: var(--cream);
-        font-family: var(--sans);
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
+      html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+      body { color: var(--ink); background: var(--cream); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
       a { color: inherit; text-decoration: none; }
       img { display: block; max-width: 100%; border-radius: var(--radius); }
-      .container { width: min(900px, calc(100% - 32px)); margin-inline: auto; }
-      h1,h2,h3 { font-family: var(--serif); line-height: 1.15; }
-      h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
-      h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 16px; letter-spacing: -0.02em; }
-      h3 { font-size: clamp(1.25rem, 3vw, 1.6rem); margin-bottom: 10px; color: var(--chili); }
-      p { color: var(--muted); font-size: 1rem; }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 14px 22px;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        border: 1px solid transparent;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        text-align: center;
-      }
+      .container { width: min(var(--max), calc(100% - 32px)); margin-inline: auto; }
+      h1,h2,h3 { font-family: var(--serif); line-height: 1.12; margin: 0; }
+      h1 { font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: -0.03em; }
+      h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em; }
+      h3 { font-size: clamp(1.25rem, 3vw, 1.7rem); color: var(--chili); }
+      p { color: var(--muted); font-size: 1rem; margin: 0; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--chili); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.19em; text-transform: uppercase; margin-bottom: 8px; }
+      .eyebrow::before { content: ""; width: 20px; height: 1px; background: currentColor; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 24px; border-radius: 10px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid transparent; cursor: pointer; transition: all 0.2s ease; }
       .btn.chili { background: var(--chili); color: #fff; }
-      .btn.chili:hover { background: var(--chili-dark); transform: translateY(-1px); }
+      .btn.chili:hover { background: var(--chili-dark); transform: translateY(-2px); }
       .btn.marigold { background: var(--marigold); color: var(--charcoal); }
-      .btn.marigold:hover { background: var(--marigold-dark); transform: translateY(-1px); }
+      .btn.marigold:hover { background: var(--marigold-dark); transform: translateY(-2px); }
       .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
       .btn.ghost:hover { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
       .btn.full { width: 100%; }
-      .top-bar {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: rgba(250, 245, 235, 0.95);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--line);
-        display: none;
-      }
-      .top-bar .bar-wrap {
-        display: flex;
-        gap: 8px;
-        padding: 10px 4px;
-      }
-      .top-bar .btn { flex: 1; font-size: 0.85rem; padding: 10px 6px; gap: 6px; }
-      header.site-header {
-        padding: 70px 0 40px;
-        text-align: center;
-        background: var(--charcoal);
-        color: var(--cream);
-      }
-      header.site-header h1 { color: var(--cream); margin-bottom: 8px; }
-      header.site-header .subtitle { color: var(--marigold); }
-      .open-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 14px;
-        border-radius: 999px;
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin-bottom: 16px;
-      }
-      .open-badge.open { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.35); }
-      .open-badge.closed { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.35); }
-      .tagline { font-size: 1.1rem; max-width: 700px; margin: 0 auto 20px; color: #e8dcc8; }
-      .hours { font-size: 0.95rem; color: #c9bda3; }
-      .section { padding: 70px 0; }
+    </style>
+  </head>
+  <body>
+      header.site-header { position: sticky; top: 0; z-index: 100; background: rgba(250,245,235,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+      .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 16px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 800; font-size: 1.5rem; color: var(--ink); }
+      .brand-mark { width: 42px; height: 42px; border-radius: 10px; background: var(--chili); color: #fff; display: grid; place-items: center; font-size: 1.4rem; }
+      .nav-links { display: none; gap: 24px; align-items: center; }
+      .nav-links a { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+      .nav-links a:hover { color: var(--chili); }
+      @media (min-width: 760px) { .nav-links { display: flex; } }
+      .open-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+      .open-badge.open { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(34,197,94,0.35); }
+      .open-badge.closed { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.35); }
+    </style>
+  </head>
+  <body>
+      .hero { position: relative; padding: 70px 0; overflow: hidden; }
+      .hero-visual { position: relative; height: 340px; border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; background: var(--charcoal); }
+      .hero-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,20,20,0.8), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+      .hero-text { color: #fff; }
+      .hero-text h1 { color: #fff; margin-bottom: 8px; }
+      .hero-text p { color: #e8dcc8; margin-bottom: 16px; font-size: 1rem; }
+      .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+      .quick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 40px; }
+      .fact-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; text-align: center; }
+      .fact-card .label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+      .fact-card .value { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); font-weight: 600; }
+      .fact-card .value a { color: var(--chili); font-weight: 700; }
+      .featured { margin-bottom: 60px; }
+      .featured-grid { display: grid; gap: 16px; }
+      @media (min-width: 640px) { .featured-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1024px) { .featured-grid { grid-template-columns: repeat(4, 1fr); } }
+      .feature-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+      .feature-photo { width: 100%; height: 160px; object-fit: cover; display: block; }
+      .feature-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+      .feature-name { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); }
+      .feature-price { font-family: var(--serif); font-weight: 800; color: var(--chili); }
+      .feature-desc { font-size: 0.8rem; color: var(--muted); }
       .section-header { text-align: center; margin-bottom: 40px; }
-      .section-header h2 { color: var(--charcoal); }
       .section-header p { max-width: 600px; margin: 10px auto 0; }
-      .hero { position: relative; padding: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 60px; }
-      .hero-visual { position: relative; height: 320px; background: var(--charcoal); }
-      .hero-photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); display: block; }
-      .about-photo { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); display: block; }
-      .salsa-photo { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius); margin-bottom: 12px; display: block; }
-      .map-photo { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); margin-bottom: 24px; display: block; }
-      .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,20,20,0.85), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; gap: 8px; }
-      .hero-overlay h2 { color: #fff; margin: 0; }
-      .hero-overlay p { color: #e8dcc8; margin: 0; font-size: 0.95rem; }
-      .menu-grid { display: grid; gap: 32px; }
-      @media (min-width: 640px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+      .menu-grid { display: grid; gap: 24px; }
+      @media (min-width: 760px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
       .menu-category { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
       .menu-category-header { padding: 16px 20px; background: var(--chili); color: #fff; display: flex; justify-content: space-between; align-items: center; }
       .menu-items { padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; }
       .menu-item { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f2ece0; font-size: 0.95rem; }
       .menu-item:last-child { border-bottom: none; }
       .menu-item-name { color: var(--ink); font-weight: 500; }
-      .menu-item-price { font-family: var(--serif); font-weight: 700; color: var(--chili); white-space: nowrap; }
-      .menu-note { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 8px; }
-      .salsa { background: var(--charcoal); color: var(--cream); padding: 70px 0; }
+      .menu-item-price { font-family: var(--serif); font-weight: 800; color: var(--chili); white-space: nowrap; }
+      .social-proof { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; text-align: center; margin-bottom: 40px; }
+      .social-proof p { font-size: 1.25rem; font-weight: 700; color: var(--chili); }
+      .social-proof span { color: var(--muted); font-weight: 400; }
+      .salsa { background: var(--charcoal); color: var(--cream); padding: 60px 0; }
       .salsa .container { text-align: center; }
       .salsa h2 { color: var(--marigold); }
-      .salsa-grid { display: grid; gap: 20px; margin-top: 40px; }
+      .salsa-grid { display: grid; gap: 24px; margin-top: 40px; }
       @media (min-width: 640px) { .salsa-grid { grid-template-columns: repeat(2, 1fr); } }
       .salsa-card { background: rgba(250,245,235,0.05); border: 1px solid rgba(250,245,235,0.15); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-      .salsa-card svg { width: 48px; height: 48px; color: var(--chili); }
+      .salsa-photo { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius); margin-bottom: 8px; display: block; }
       .about { display: grid; gap: 40px; align-items: center; }
       @media (min-width: 760px) { .about { grid-template-columns: 1fr 1fr; } }
       .about-text h2 { color: var(--charcoal); }
-      .about-placeholder { height: 300px; background: #e8dcc8; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #8a7a68; font-size: 0.9rem; }
-      .catering { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 70px 0; }
+      .about-photo { width: 100%; height: 320px; object-fit: cover; border-radius: var(--radius); display: block; }
+      .catering { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 60px 0; }
       .catering .container { text-align: center; }
       .catering h2 { color: var(--charcoal); }
       .catering p { max-width: 500px; margin: 12px auto 24px; }
       .sms-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--chili); color: #fff; padding: 16px 28px; border-radius: 12px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; text-decoration: none; }
       .sms-btn:hover { background: var(--chili-dark); transform: translateY(-2px); }
-      .location { padding: 70px 0; background: var(--cream); }
+      .location { padding: 60px 0; background: var(--cream); }
       .location .container { text-align: center; }
-      .map-placeholder { height: 300px; background: #d8c9b4; border-radius: var(--radius); margin: 24px 0; display: flex; align-items: center; justify-content: center; color: #8a7a68; font-size: 0.9rem; }
+      .map-photo { width: 100%; height: 320px; object-fit: cover; border-radius: var(--radius); margin-bottom: 24px; display: block; }
       .address-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: inline-block; }
       .address-card p { margin: 4px 0; font-size: 0.95rem; }
-      .social-proof { padding: 40px 0; text-align: center; background: #fff; }
-      .social-proof p { font-size: 1.1rem; font-weight: 600; color: var(--chili); }
-      .social-proof span { color: var(--muted); font-weight: 400; }
       footer { padding: 40px 0; text-align: center; background: var(--charcoal); color: #c9bda3; font-size: 0.9rem; }
       footer p { margin: 4px 0; }
-      @media (min-width: 640px) {
-        .top-bar { display: none; }
-        header.site-header { padding: 100px 0 60px; }
-      }
+      @media (max-width: 640px) { .hero-actions .btn { width: 100%; } .fact-card { padding: 16px; } }
     </style>
   </head>
   <body>
-    <div class="top-bar">
-      <div class="bar-wrap">
-        <a href="tel:+15122106855" class="btn chili full">📞 Call to Order</a>
-        <a href="https://maps.google.com/?q=4619+S+Congress+Ave,+Austin,+TX+78745" target="_blank" class="btn marigold full">📍 Get Directions</a>
-        <a href="#menu" class="btn ghost full">🌮 Menu</a>
-      </div>
-    </div>
-
     <header class="site-header">
-      <div class="container">
-        <div class="open-badge" id="openBadge">
-          <span id="openDot">●</span>
-          <span id="openText">Checking hours…</span>
-        </div>
-        <h1>Tacos Las Amazonas<br><span class="subtitle">Estilo Jalisco #3</span></h1>
-        <p class="tagline">Authentic Jalisco Street Tacos · Handmade Corn Tortillas · Late-Night Cravings on South Congress</p>
-        <div class="hours">4619 S Congress Ave, Austin, TX 78745 · Open daily from 7:00 AM</div>
+      <div class="container nav-wrap">
+        <a class="brand" href="#"><span class="brand-mark">T</span><span>Tacos Las Amazonas</span></a>
+        <nav class="nav-links"><a href="#menu">Menu</a><a href="#location">Location</a></nav>
+        <a href="tel:+15122106855" class="btn chili full">Call (512) 210-6855</a>
       </div>
     </header>
-
     <section class="hero">
-      <div class="hero-visual">
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=85"
-          alt="Glowing food truck at night with warm lights"
-          loading="lazy"
-          class="hero-photo"
-        />
-        <div class="hero-overlay">
-          <h2>Open until 3:00 AM Fri–Sat</h2>
-          <p>Covered picnic patio · Free parking · String lights</p>
+      <div class="container">
+        <div class="open-badge" id="openBadge"><span id="openDot">●</span><span id="openText">Checking hours…</span></div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=85" alt="Tacos Las Amazonas food truck at night" loading="lazy" class="hero-photo" />
+          <div class="hero-overlay">
+            <div class="hero-text">
+              <h1>Tacos Las Amazonas<br><span style="color:var(--marigold);">Estilo Jalisco #3</span></h1>
+              <p>Authentic Jalisco street tacos · Handmade corn tortillas · Al pastor off the trompo</p>
+              <div class="hero-actions">
+                <a href="tel:+15122106855" class="btn chili full">Call for Pickup</a>
+                <a href="#menu" class="btn ghost full">View Menu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quick-facts">
+          <div class="fact-card"><span class="label">Hours</span><span class="value" id="hoursText">Checking…</span></div>
+          <div class="fact-card"><span class="label">Location</span><span class="value">4619 S Congress Ave</span></div>
+          <div class="fact-card"><span class="label">Phone</span><span class="value"><a href="tel:+15122106855">(512) 210-6855</a></span></div>
+        </div>
+        <div class="social-proof"><p>4.5★ <span>· 1,700+ Google Reviews</span></p></div>
+        <div class="featured">
+          <h2>Customer Favorites</h2>
+          <div class="featured-grid">
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=85" alt="Taco al pastor" loading="lazy" class="feature-photo" />
+              <div class="feature-body"><span class="feature-name">Taco de Pastor</span><span class="feature-price">$4.60</span><span class="feature-desc">Spit-roasted pork, cilantro, onion, radish, lime</span></div>
+            </div>
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=85" alt="Street tacos" loading="lazy" class="feature-photo" />
+              <div class="feature-body"><span class="feature-name">Taco Campechano</span><span class="feature-price">$4.98</span><span class="feature-desc">Mixed steak & chorizo</span></div>
+            </div>
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=85" alt="Breakfast taco" loading="lazy" class="feature-photo" />
+              <div class="feature-body"><span class="feature-name">Migas Taco</span><span class="feature-price">$4.11</span><span class="feature-desc">Egg, tortilla chips, jalapeño</span></div>
+            </div>
+            <div class="feature-card">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=85" alt="Torta" loading="lazy" class="feature-photo" />
+              <div class="feature-body"><span class="feature-name">Torta Universal Lengua</span><span class="feature-price">$17.35</span><span class="feature-desc">Loaded Mexican sandwich</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section id="menu" class="section menu">
       <div class="container">
-        <div class="section-header">
-          <h2>Menu</h2>
-          <p>Handmade corn tortillas pressed to order · Al pastor carved fresh off the vertical trompo</p>
-        </div>
+        <div class="section-header"><h2>Menu</h2><p>Handmade corn tortillas pressed to order · Al pastor carved fresh off the vertical trompo</p></div>
         <div class="menu-grid">
           <div class="menu-category">
             <div class="menu-category-header"><span>Street Tacos</span><span>1 taco</span></div>
@@ -222,6 +188,7 @@
               <div class="menu-item"><span class="menu-item-name">Veggie Taco</span><span class="menu-item-price">$4.22</span></div>
               <div class="menu-note">Served on handmade corn tortillas with cilantro, grilled onions, radish, cucumber &amp; lime.</div>
             </div>
+          </div>
           <div class="menu-category">
             <div class="menu-category-header"><span>Breakfast (7:00 AM)</span><span>All morning</span></div>
             <div class="menu-items">
@@ -240,7 +207,6 @@
               <div class="menu-item"><span class="menu-item-name">Veggie Omelette</span><span class="menu-item-price">$13.00</span></div>
             </div>
           </div>
-          </div>
           <div class="menu-category">
             <div class="menu-category-header"><span>Burritos &amp; Tortas</span><span>Hearty</span></div>
             <div class="menu-items">
@@ -249,8 +215,6 @@
               <div class="menu-item"><span class="menu-item-name">Burrito Beef Fajita</span><span class="menu-item-price">$14.35</span></div>
               <div class="menu-item"><span class="menu-item-name">Burrito Tripa</span><span class="menu-item-price">$14.48</span></div>
               <div class="menu-item"><span class="menu-item-name">Torta Universal Lengua</span><span class="menu-item-price">$17.35</span></div>
-              <div class="menu-item"><span class="menu-item-name">Torta Del Chavo</span><span class="menu-item-price">Market</span></div>
-              <div class="menu-item"><span class="menu-item-name">Michoacana Burger</span><span class="menu-item-price">Market</span></div>
               <div class="menu-item"><span class="menu-item-name">Menudo</span><span class="menu-item-price">$19.85</span></div>
               <div class="menu-note">Loaded Mexican sandwiches and oversized burritos.</div>
             </div>
@@ -272,35 +236,21 @@
     </section>
     <section class="section salsa" id="salsas">
       <div class="container">
-        <div class="section-header">
-          <h2>The Salsa Bar</h2>
-          <p>Regulars rave about these almost as much as the tacos.</p>
-        </div>
+        <div class="section-header"><h2>The Salsa Bar</h2><p>Regulars rave about these almost as much as the tacos.</p></div>
         <div class="salsa-grid">
           <div class="salsa-card">
-            <img
-              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=85"
-              alt="Red salsa sauce"
-              loading="lazy"
-              class="salsa-photo"
-            />
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=85" alt="Red salsa sauce" loading="lazy" class="salsa-photo" />
             <h3>Cachonda (Red)</h3>
             <p style="margin:0; font-size:0.9rem;">Fiery house red sauce — for the heat seekers.</p>
           </div>
           <div class="salsa-card">
-            <img
-              src="https://images.unsplash.com/photo-1596147051243-d2e50b3e6205?auto=format&fit=crop&w=400&q=85"
-              alt="Green jalapeño salsa"
-              loading="lazy"
-              class="salsa-photo"
-            />
+            <img src="https://images.unsplash.com/photo-1596147051243-d2e50b3e6205?auto=format&fit=crop&w=400&q=85" alt="Green jalapeño salsa" loading="lazy" class="salsa-photo" />
             <h3>Austin Jalapeño (Green)</h3>
             <p style="margin:0; font-size:0.9rem;">Creamy green jalapeño salsa — a house favorite.</p>
           </div>
         </div>
       </div>
     </section>
-
     <section class="section about">
       <div class="container">
         <div class="about-text">
@@ -308,12 +258,7 @@
           <p>Bringing traditional Jalisco-style street food culture to South Austin, Tacos Las Amazonas Estilo Jalisco #3 has become a neighborhood staple on South Congress. Built around fresh ingredients, handmade tortillas, and generous portions, the truck serves everyone from early-morning commuters to late-night regulars under a covered outdoor patio with free on-site parking.</p>
           <p style="margin-top:16px;">With over 1,700 Google reviews, locals keep coming back for the fast turnaround, casual pricing, and the famous salsa bar — whether it's 7:00 AM breakfast tacos or 3:00 AM weekend cravings.</p>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
-          alt="Covered outdoor picnic patio with string lights"
-          loading="lazy"
-          class="about-photo"
-        />
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Covered outdoor picnic patio with string lights" loading="lazy" class="about-photo" />
       </div>
     </section>
     <section class="section catering">
@@ -324,16 +269,10 @@
         <p style="margin-top:16px; font-size:0.85rem; color:var(--muted);">Food truck staff monitor texts during service. No email form — SMS gets you the fastest reply.</p>
       </div>
     </section>
-
     <section class="section location" id="location">
       <div class="container">
         <h2>Visit Us</h2>
-        <img
-          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85"
-          alt="Mexican street food truck location"
-          loading="lazy"
-          class="map-photo"
-        />
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85" alt="Mexican street food truck location" loading="lazy" class="map-photo" />
         <div class="address-card">
           <p><strong>4619 S Congress Ave</strong><br>Austin, TX 78745</p>
           <p>South Congress / South Austin</p>
@@ -343,16 +282,12 @@
         <a href="https://maps.google.com/?q=4619+S+Congress+Ave,+Austin,+TX+78745" target="_blank" class="btn marigold" style="margin-top:16px; display:inline-block;">Get Directions →</a>
       </div>
     </section>
-
-    <div class="social-proof"><p>4.5★ <span>· 1,700+ Google Reviews</span></p></div>
-
     <footer>
       <div class="container">
         <p>&copy; <span id="year"></span> Tacos Las Amazonas Estilo Jalisco #3. All rights reserved.</p>
         <p>4619 S Congress Ave, Austin, TX 78745 · <a href="tel:+15122106855" style="color:#c9bda3;">(512) 210-6855</a></p>
       </div>
     </footer>
-
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
       function updateOpenBadge() {

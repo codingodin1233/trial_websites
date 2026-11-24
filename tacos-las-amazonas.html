@@ -112,8 +112,10 @@
       .section-header p { max-width: 600px; margin: 10px auto 0; }
       .hero { position: relative; padding: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 60px; }
       .hero-visual { position: relative; height: 320px; background: var(--charcoal); }
-      .hero-placeholder { width: 100%; height: 100%; background: #2a2a2a; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: var(--radius); overflow: hidden; }
-      .hero-placeholder svg { width: 90px; height: 90px; color: var(--marigold); }
+      .hero-photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); display: block; }
+      .about-photo { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); display: block; }
+      .salsa-photo { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius); margin-bottom: 12px; display: block; }
+      .map-photo { width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius); margin-bottom: 24px; display: block; }
       .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,20,20,0.85), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; gap: 8px; }
       .hero-overlay h2 { color: #fff; margin: 0; }
       .hero-overlay p { color: #e8dcc8; margin: 0; font-size: 0.95rem; }
@@ -183,20 +185,12 @@
 
     <section class="hero">
       <div class="hero-visual">
-        <div class="hero-placeholder">
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="100" height="100" rx="20" fill="#2a2a2a" />
-            <rect x="20" y="70" width="60" height="15" fill="#4a4a4a" />
-            <rect x="25" y="62" width="50" height="8" fill="#3a3a3a" />
-            <circle cx="75" cy="25" r="8" fill="#F4A900" opacity="0.9" />
-            <rect x="15" y="35" width="70" height="12" fill="#D92B2B" opacity="0.9" />
-            <rect x="15" y="35" width="70" height="3" fill="#F4A900" opacity="0.6" />
-            <text x="50" y="60" font-family="Arial" font-size="8" fill="#1a1a1a" text-anchor="middle" font-weight="bold">TRUCK</text>
-            <path d="M30 80 Q 50 60 70 80" stroke="#8a7a68" stroke-width="3" fill="none" stroke-linecap="round" />
-            <path d="M30 80 Q 50 62 70 80" stroke="#6b5b4e" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5" />
-          </svg>
-          <span>Photo slot: Glowing food truck at night</span>
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=85"
+          alt="Glowing food truck at night with warm lights"
+          loading="lazy"
+          class="hero-photo"
+        />
         <div class="hero-overlay">
           <h2>Open until 3:00 AM Fri–Sat</h2>
           <p>Covered picnic patio · Free parking · String lights</p>
@@ -284,24 +278,22 @@
         </div>
         <div class="salsa-grid">
           <div class="salsa-card">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="30" y="25" width="40" height="55" rx="6" fill="#D92B2B" />
-              <rect x="32" y="28" width="36" height="12" fill="#b92424" />
-              <circle cx="38" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-              <circle cx="50" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-              <circle cx="62" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-            </svg>
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=85"
+              alt="Red salsa sauce"
+              loading="lazy"
+              class="salsa-photo"
+            />
             <h3>Cachonda (Red)</h3>
             <p style="margin:0; font-size:0.9rem;">Fiery house red sauce — for the heat seekers.</p>
           </div>
           <div class="salsa-card">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="30" y="25" width="40" height="55" rx="6" fill="#7ba05b" />
-              <rect x="32" y="28" width="36" height="12" fill="#6e9f52" />
-              <circle cx="38" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-              <circle cx="50" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-              <circle cx="62" cy="50" r="4" fill="#F4A900" opacity="0.3" />
-            </svg>
+            <img
+              src="https://images.unsplash.com/photo-1596147051243-d2e50b3e6205?auto=format&fit=crop&w=400&q=85"
+              alt="Green jalapeño salsa"
+              loading="lazy"
+              class="salsa-photo"
+            />
             <h3>Austin Jalapeño (Green)</h3>
             <p style="margin:0; font-size:0.9rem;">Creamy green jalapeño salsa — a house favorite.</p>
           </div>
@@ -316,7 +308,12 @@
           <p>Bringing traditional Jalisco-style street food culture to South Austin, Tacos Las Amazonas Estilo Jalisco #3 has become a neighborhood staple on South Congress. Built around fresh ingredients, handmade tortillas, and generous portions, the truck serves everyone from early-morning commuters to late-night regulars under a covered outdoor patio with free on-site parking.</p>
           <p style="margin-top:16px;">With over 1,700 Google reviews, locals keep coming back for the fast turnaround, casual pricing, and the famous salsa bar — whether it's 7:00 AM breakfast tacos or 3:00 AM weekend cravings.</p>
         </div>
-        <div class="about-placeholder">Photo slot: Covered picnic patio with string lights</div>
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+          alt="Covered outdoor picnic patio with string lights"
+          loading="lazy"
+          class="about-photo"
+        />
       </div>
     </section>
     <section class="section catering">
@@ -331,7 +328,12 @@
     <section class="section location" id="location">
       <div class="container">
         <h2>Visit Us</h2>
-        <div class="map-placeholder">Photo slot: Google Maps embed — 4619 S Congress Ave, Austin, TX 78745</div>
+        <img
+          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85"
+          alt="Mexican street food truck location"
+          loading="lazy"
+          class="map-photo"
+        />
         <div class="address-card">
           <p><strong>4619 S Congress Ave</strong><br>Austin, TX 78745</p>
           <p>South Congress / South Austin</p>

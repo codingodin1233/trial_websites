@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tacos Las Amazonas Estilo Jalisco #3 | South Congress, Austin</title>
+    <meta
+      name="description"
+      content="Street tacos, breakfast tacos at 7 AM, burritos, tortas and aguas frescas on South Congress Ave, Austin. Open until 3 AM Friday and Saturday."
+    />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content="Tacos Las Amazonas Estilo Jalisco #3" />
+    <meta
+      property="og:description"
+      content="Tacos off the trompo, until 3 AM on weekends. 4619 S Congress Ave, Austin."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #f5ecdd;
+        --ink: #1b1511;
+        --chile: #c23b22;
+        --chile-d: #9f2d18;
+        --gold: #e8a33d;
+        --nopal: #2e5a44;
+        --clay: #6f5440;
+        --line: #dccbb3;
+        --head: "Fraunces", Georgia, serif;
+        --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --wrap: min(1180px, 100% - 40px);
+        --r: 6px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background: var(--cream);
+        color: var(--ink);
+        font: 400 1.0625rem/1.65 var(--body);
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 72px;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--head);
+        font-variation-settings: "opsz" 144;
+        line-height: 1.05;
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        font-weight: 800;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      p {
+        margin: 0;
+      }
+      .wrap {
+        width: var(--wrap);
+        margin-inline: auto;
+      }
+      .sr {
+        position: absolute;
+        left: -999px;
+      }
+      .skip:focus {
+        left: 12px;
+        top: 12px;
+        z-index: 200;
+        background: var(--ink);
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: var(--r);
+      }
+      :focus-visible {
+        outline: 3px solid var(--gold);
+        outline-offset: 3px;
+      }
+      .ico {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex: none;
+      }
+
+      /* buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 26px;
+        border-radius: var(--r);
+        border: 2px solid transparent;
+        font: 700 1rem var(--body);
+        text-decoration: none;
+        cursor: pointer;
+        transition:
+          background-color 0.2s,
+          color 0.2s,
+          border-color 0.2s;
+      }
+      .btn.red {
+        background: var(--chile);
+        color: #fff;
+      }
+      .btn.red:hover {
+        background: var(--chile-d);
+      }
+      .btn.gold {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .btn.gold:hover {
+        background: #f2b655;
+      }
+      .btn.line {
+        border-color: currentColor;
+        background: transparent;
+      }
+      .btn.line:hover {
+        background: rgba(255, 255, 255, 0.14);
+      }
+      .btn.dark {
+        border-color: var(--ink);
+        color: var(--ink);
+      }
+      .btn.dark:hover {
+        background: var(--ink);
+        color: var(--cream);
+      }
+
+      /* demo notice */
+      .demo {
+        background: var(--gold);
+        color: var(--ink);
+        font-size: 0.875rem;
+        text-align: center;
+        padding: 8px 16px;
+      }
+
+      /* header */
+      .top {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(27, 21, 17, 0.96);
+        color: var(--cream);
+        backdrop-filter: blur(8px);
+      }
+      .top .wrap {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 64px;
+      }
+      .brand {
+        font: 800 1.15rem/1.1 var(--head);
+        text-decoration: none;
+        margin-right: auto;
+      }
+      .brand small {
+        display: block;
+        font: 500 0.75rem var(--body);
+        opacity: 0.75;
+        letter-spacing: 0;
+      }
+      .nav {
+        display: none;
+        gap: 26px;
+      }
+      .nav a {
+        text-decoration: none;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+      .nav a:hover {
+        opacity: 1;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+      .badge i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #8b8b8b;
+      }
+      .badge.on i {
+        background: #5fd48a;
+        box-shadow: 0 0 0 4px rgba(95, 212, 138, 0.25);
+      }
+      .top .btn {
+        min-height: 42px;
+        padding: 0 18px;
+        font-size: 0.9rem;
+      }
+      .top .badge {
+        display: none;
+      }
+      @media (min-width: 760px) {
+        .nav {
+          display: flex;
+        }
+        .top .badge {
+          display: inline-flex;
+        }
+      }
+
+      /* hero */
+      .hero {
+        position: relative;
+        min-height: calc(100svh - 100px);
+        min-height: min(820px, calc(100svh - 100px));
+        display: flex;
+        align-items: flex-end;
+        background: var(--ink);
+        color: #fff;
+        overflow: hidden;
+      }
+      .hero > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(27, 21, 17, 0.25),
+          rgba(27, 21, 17, 0.88) 85%
+        );
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 2;
+        padding: 120px 0 56px;
+      }
+      .hero h1 {
+        font-size: clamp(3rem, 10.5vw, 8.2rem);
+        font-weight: 800;
+        max-width: 11ch;
+      }
+      .hero p {
+        max-width: 34rem;
+        margin: 24px 0 32px;
+        font-size: 1.2rem;
+        color: #f1e6d3;
+      }
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .hero .sub {
+        font-size: 0.9rem;
+        margin: 20px 0 0;
+        opacity: 0.8;
+      }
+
+      /* info strip */
+      .strip {
+        background: var(--chile);
+        color: #fff;
+      }
+      .strip .wrap {
+        display: grid;
+        gap: 18px;
+        padding: 26px 0;
+      }
+      .strip div {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .strip b {
+        display: block;
+        font-weight: 700;
+      }
+      @media (min-width: 820px) {
+        .strip .wrap {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 32px;
+        }
+      }
+
+      section {
+        padding: 88px 0;
+      }
+      @media (max-width: 700px) {
+        section {
+          padding: 60px 0;
+        }
+      }
+
+      /* highlights */
+      .hl {
+        display: grid;
+        gap: 40px;
+      }
+      .pic {
+        margin-top: 32px;
+      }
+      .hl ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .hl li {
+        display: grid;
+        gap: 8px;
+        padding: 26px 0;
+        border-top: 2px solid var(--ink);
+      }
+      .hl li:last-child {
+        border-bottom: 2px solid var(--ink);
+      }
+      .hl p {
+        color: var(--clay);
+        max-width: 44ch;
+      }
+      @media (min-width: 860px) {
+        .hl {
+          grid-template-columns: 5fr 7fr;
+          gap: 72px;
+        }
+        .hl li {
+          grid-template-columns: 1fr 1.3fr;
+          gap: 32px;
+          align-items: baseline;
+        }
+      }
+
+      /* menu */
+      .menu {
+        background: var(--ink);
+        color: var(--cream);
+      }
+      .menu .intro {
+        max-width: 46ch;
+        color: #d9ccb8;
+        margin: 16px 0 36px;
+      }
+      .tabs {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+        margin-bottom: 28px;
+        scrollbar-width: thin;
+      }
+      .tabs button {
+        flex: none;
+        min-height: 46px;
+        padding: 0 20px;
+        border-radius: 99px;
+        border: 2px solid rgba(245, 236, 221, 0.35);
+        background: transparent;
+        color: inherit;
+        font: 500 1rem var(--body);
+        cursor: pointer;
+        transition:
+          background-color 0.2s,
+          color 0.2s;
+      }
+      .tabs button[aria-selected="true"] {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .panel {
+        display: grid;
+        gap: 0 64px;
+      }
+      @media (min-width: 860px) {
+        .panel {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .row {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 13px 0;
+      }
+      .row .d {
+        flex: 1;
+        border-bottom: 2px dotted rgba(245, 236, 221, 0.3);
+        transform: translateY(-4px);
+      }
+      .row .p {
+        font: 700 1.15rem var(--head);
+        color: var(--gold);
+        white-space: nowrap;
+      }
+      .note {
+        grid-column: 1/-1;
+        margin-top: 18px;
+        color: #d9ccb8;
+        font-size: 0.95rem;
+      }
+      .panel.fade {
+        animation: in 0.35s ease;
+      }
+      @keyframes in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* salsa */
+      .salsa {
+        display: grid;
+        gap: 0;
+      }
+      .salsa > div {
+        padding: 48px 28px;
+      }
+      .salsa .r {
+        background: var(--chile);
+        color: #fff;
+      }
+      .salsa .g {
+        background: var(--nopal);
+        color: #fff;
+      }
+      .salsa h3 {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .salsa p {
+        max-width: 30ch;
+      }
+      @media (min-width: 760px) {
+        .salsa {
+          grid-template-columns: 1fr 1fr;
+        }
+        .salsa > div {
+          padding: 72px 48px;
+        }
+      }
+      .salsa-head {
+        margin-bottom: 32px;
+        max-width: 38rem;
+      }
+      .salsa-head p {
+        margin-top: 12px;
+        color: var(--clay);
+      }
+
+      /* story */
+      .story {
+        display: grid;
+        gap: 40px;
+        align-items: center;
+      }
+      .story p + p {
+        margin-top: 16px;
+      }
+      .story p {
+        color: var(--clay);
+        max-width: 52ch;
+      }
+      .story h2 {
+        margin-bottom: 22px;
+      }
+      figure {
+        margin: 0;
+        position: relative;
+        background: #d8c7ad;
+        border-radius: var(--r);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+      }
+      figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      figcaption {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background: rgba(27, 21, 17, 0.8);
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 3px 9px;
+        border-radius: 99px;
+      }
+      @media (min-width: 860px) {
+        .story {
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+        }
+      }
+
+      /* visit */
+      .visit {
+        background: #eadcc4;
+      }
+      .visit .grid {
+        display: grid;
+        gap: 40px;
+      }
+      .visit address {
+        font-style: normal;
+        font-size: 1.25rem;
+        margin: 18px 0 22px;
+      }
+      .hours {
+        width: 100%;
+        max-width: 420px;
+        border-collapse: collapse;
+        margin: 0 0 28px;
+      }
+      .hours th,
+      .hours td {
+        text-align: left;
+        padding: 9px 0;
+        border-bottom: 1px solid var(--line);
+        font-weight: 400;
+      }
+      .hours td {
+        text-align: right;
+      }
+      .hours tr.today {
+        font-weight: 700;
+        color: var(--chile);
+      }
+      .hours tr.today th,
+      .hours tr.today td {
+        font-weight: 700;
+      }
+      .map {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 340px;
+        border-radius: var(--r);
+        background: #d8c7ad;
+      }
+      @media (min-width: 860px) {
+        .visit .grid {
+          grid-template-columns: 1fr 1.1fr;
+          gap: 64px;
+        }
+      }
+
+      /* order form */
+      .order {
+        background: var(--ink);
+        color: var(--cream);
+      }
+      .order .grid {
+        display: grid;
+        gap: 36px;
+      }
+      .order p.l {
+        color: #d9ccb8;
+        max-width: 40ch;
+        margin-top: 14px;
+      }
+      form {
+        display: grid;
+        gap: 18px;
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        font-weight: 500;
+      }
+      input,
+      textarea {
+        font: inherit;
+        color: var(--ink);
+        background: #fff;
+        border: 2px solid transparent;
+        border-radius: var(--r);
+        padding: 13px 14px;
+        min-height: 50px;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: var(--gold);
+        outline: none;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .hint {
+        font-size: 0.9rem;
+        color: #d9ccb8;
+      }
+      #msg {
+        min-height: 1.5em;
+        font-weight: 500;
+        color: var(--gold);
+      }
+      @media (min-width: 860px) {
+        .order .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+        }
+      }
+
+      footer {
+        background: #120d0a;
+        color: #cdbfa9;
+        padding: 44px 0;
+        font-size: 0.95rem;
+      }
+      footer .wrap {
+        display: grid;
+        gap: 8px;
+      }
+      footer a {
+        color: #fff;
+      }
+
+      /* mobile action bar */
+      .bar {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 60;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 8px;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+        background: rgba(27, 21, 17, 0.97);
+      }
+      .bar .btn {
+        min-height: 48px;
+        padding: 0 8px;
+        font-size: 0.9rem;
+        gap: 6px;
+      }
+      @media (min-width: 760px) {
+        .bar {
+          display: none;
+        }
+        body {
+          padding-bottom: 0;
+        }
+      }
+
+      /* reveal */
+      .js .rv {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .js .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .js .hero h1,
+      .js .hero p,
+      .js .hero .cta,
+      .js .hero .sub {
+        animation: in 1s ease both;
+      }
+      .js .hero p {
+        animation-delay: 0.2s;
+      }
+      .js .hero .cta {
+        animation-delay: 0.4s;
+      }
+      .js .hero .sub {
+        animation-delay: 0.55s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .js .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-msg" viewBox="0 0 24 24">
+        <path
+          d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+        />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="i-car" viewBox="0 0 24 24">
+        <path d="M19 17h2v-5l-2-5H5L3 12v5h2" />
+        <circle cx="7.5" cy="17" r="2" />
+        <circle cx="16.5" cy="17" r="2" />
+        <path d="M9.5 17h5M3 12h18" />
+      </symbol>
+    </svg>
+
+    <a class="sr skip" href="#menu">Skip to menu</a>
+    <div class="demo">
+      Practice demo site. Not the official site of Tacos Las Amazonas. Photos
+      are stock placeholders.
+    </div>
+
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="#top"
+          >Tacos Las Amazonas<small>Estilo Jalisco #3</small></a
+        >
+        <nav class="nav" aria-label="Main">
+          <a href="#menu">Menu</a><a href="#salsas">Salsa bar</a
+          ><a href="#visit">Visit</a><a href="#order">Large orders</a>
+        </nav>
+        <span class="badge" id="badge"
+          ><i></i><span id="badgeText">Checking hours</span></span
+        >
+        <a class="btn red" href="tel:+15122106855"
+          ><svg class="ico"><use href="#i-phone" /></svg>Call to order</a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" style="padding: 0">
+        <img
+          src="https://images.unsplash.com/photo-1613409385222-3d0decb6742a?auto=format&fit=crop&w=1800&q=80"
+          alt="Tacos al pastor on a tray (placeholder photo)"
+          width="1800"
+          height="1200"
+          fetchpriority="high"
+          onerror="this.style.display = 'none'"
+        />
+        <div class="wrap">
+          <h1>Tacos off the trompo, until 3 AM on weekends.</h1>
+          <p>
+            Handmade corn tortillas, al pastor carved to order, and breakfast
+            tacos from 7 AM. Come hungry to South Congress.
+          </p>
+          <div class="cta">
+            <a class="btn red" href="tel:+15122106855"
+              ><svg class="ico"><use href="#i-phone" /></svg>Call to order</a
+            >
+            <a
+              class="btn line"
+              href="https://maps.google.com/?q=4619+S+Congress+Ave,+Austin,+TX+78745"
+              target="_blank"
+              rel="noopener"
+              ><svg class="ico"><use href="#i-pin" /></svg>Get directions</a
+            >
+          </div>
+          <p class="sub">4619 S Congress Ave, Austin, TX 78745</p>
+        </div>
+      </section>
+
+      <div class="strip">
+        <div class="wrap">
+          <div>
+            <svg class="ico"><use href="#i-clock" /></svg
+            ><span
+              ><b id="todayHours">Hours today</b>Open daily, see full hours
+              below</span
+            >
+          </div>
+          <div>
+            <svg class="ico"><use href="#i-pin" /></svg
+            ><span><b>4619 S Congress Ave</b>South Austin, TX 78745</span>
+          </div>
+          <div>
+            <svg class="ico"><use href="#i-car" /></svg
+            ><span
+              ><b>Free on-site parking</b>Covered outdoor patio seating</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div class="wrap hl">
+          <div class="rv">
+            <h2>Three reasons the line forms.</h2>
+            <figure class="pic">
+              <img
+                src="https://images.unsplash.com/photo-1662478839359-751ffc3cbbd8?auto=format&fit=crop&w=1000&q=80"
+                alt="Breakfast burritos with egg, cheese and chorizo (placeholder photo)"
+                width="1000"
+                height="750"
+                loading="lazy"
+                onerror="this.style.display = 'none'"
+              />
+              <figcaption>Placeholder photo</figcaption>
+            </figure>
+          </div>
+          <ul class="rv">
+            <li>
+              <h3>Al pastor, off the trompo</h3>
+              <p>
+                Pork carved from the vertical spit, piled on a tortilla pressed
+                to order.
+              </p>
+            </li>
+            <li>
+              <h3>Tortillas made by hand</h3>
+              <p>
+                Corn tortillas with cilantro, grilled onion, radish, cucumber
+                and lime.
+              </p>
+            </li>
+            <li>
+              <h3>Breakfast starts at 7</h3>
+              <p>
+                Migas, potato and egg, bacon and egg, plus burritos and plates.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="wrap">
+          <h2 class="rv">The menu</h2>
+          <p class="intro rv">
+            Prices shown are online-ordering prices and may differ slightly at
+            the truck. Call ahead for pickup.
+          </p>
+          <div
+            class="tabs"
+            role="tablist"
+            aria-label="Menu categories"
+            id="tabs"
+          ></div>
+          <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+        </div>
+      </section>
+
+      <section id="salsas">
+        <div class="wrap salsa-head rv">
+          <h2>The salsa bar</h2>
+          <p>Two house salsas, self-serve. Pick your heat.</p>
+        </div>
+        <div class="salsa rv">
+          <div class="r">
+            <h3>Cachonda</h3>
+            <p>The red one. Fiery house sauce for people who like heat.</p>
+          </div>
+          <div class="g">
+            <h3>Austin Jalapeño</h3>
+            <p>The green one. Creamy jalapeño salsa that goes on everything.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap story">
+          <div class="rv">
+            <h2>A taco truck with a patio.</h2>
+            <p>
+              Tacos Las Amazonas Estilo Jalisco #3 serves Jalisco-style street
+              food from South Congress, from early breakfast tacos to late-night
+              orders on weekends.
+            </p>
+            <p>
+              Grab a table on the covered patio under the string lights, park
+              for free on site, or call ahead and pick up.
+            </p>
+          </div>
+          <figure class="rv">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+              alt="Covered outdoor patio with string lights (placeholder photo)"
+              width="1200"
+              height="900"
+              loading="lazy"
+              onerror="this.style.display = 'none'"
+            />
+            <figcaption>Placeholder photo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="wrap grid">
+          <div class="rv">
+            <h2>Visit the truck</h2>
+            <address>4619 S Congress Ave<br />Austin, TX 78745</address>
+            <table class="hours" id="hours">
+              <caption class="sr">
+                Opening hours
+              </caption>
+            </table>
+            <div class="cta">
+              <a
+                class="btn gold"
+                href="https://maps.google.com/?q=4619+S+Congress+Ave,+Austin,+TX+78745"
+                target="_blank"
+                rel="noopener"
+                ><svg class="ico"><use href="#i-pin" /></svg>Get directions</a
+              >
+              <a class="btn dark" href="tel:+15122106855"
+                ><svg class="ico"><use href="#i-phone" /></svg>(512) 210-6855</a
+              >
+            </div>
+          </div>
+          <iframe
+            class="map rv"
+            title="Map of 4619 S Congress Ave, Austin"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=4619+S+Congress+Ave,+Austin,+TX+78745&output=embed"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="order" id="order">
+        <div class="wrap grid">
+          <div class="rv">
+            <h2>Feeding a crew?</h2>
+            <p class="l">
+              Office trays, job-site lunches, events. Tell us what you need and
+              we’ll text you back during service hours.
+            </p>
+          </div>
+          <form id="form" class="rv" novalidate>
+            <label for="n"
+              >Your name<input id="n" name="n" autocomplete="name" required
+            /></label>
+            <label for="o"
+              >What do you need, and when?<textarea
+                id="o"
+                name="o"
+                required
+                placeholder="Example: 40 tacos for Friday at noon"
+              ></textarea>
+            </label>
+            <button class="btn gold" type="submit">
+              <svg class="ico"><use href="#i-msg" /></svg>Text your order
+            </button>
+            <p class="hint">
+              This opens your messaging app with the message filled in. Nothing
+              is sent until you press send.
+            </p>
+            <p id="msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          &copy; <span id="yr"></span> Tacos Las Amazonas Estilo Jalisco #3.
+          Practice demo, not affiliated with the business.
+        </p>
+        <p>Placeholder photos from Unsplash: Tai’s Captures and Mikey Frost.</p>
+        <p>
+          4619 S Congress Ave, Austin, TX 78745.
+          <a href="tel:+15122106855">(512) 210-6855</a>
+        </p>
+      </div>
+    </footer>
+
+    <nav class="bar" aria-label="Quick actions">
+      <a class="btn red" href="tel:+15122106855"
+        ><svg class="ico"><use href="#i-phone" /></svg>Call</a
+      >
+      <a
+        class="btn gold"
+        href="https://maps.google.com/?q=4619+S+Congress+Ave,+Austin,+TX+78745"
+        target="_blank"
+        rel="noopener"
+        ><svg class="ico"><use href="#i-pin" /></svg>Map</a
+      >
+      <a class="btn line" style="color: #f5ecdd" href="#menu">Menu</a>
+    </nav>
+
+    <script>
+      document.documentElement.classList.add("js");
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      /* Menu data: prices are from the practice brief and unverified */
+      const MENU = {
+        "Street tacos": {
+          n: "Handmade corn tortilla, cilantro, grilled onion, radish, cucumber and lime.",
+          i: [
+            ["Pastor", 4.6],
+            ["Chorizo", 4.6],
+            ["Carnitas", 4.6],
+            ["Chicken fajita", 4.6],
+            ["Suadero", 4.86],
+            ["Cabeza", 4.86],
+            ["Bistec", 4.98],
+            ["Campechano", 4.98],
+            ["Birria", 4.98],
+            ["Beef fajita", 5.24],
+            ["Lengua", 5.72],
+            ["Tripa", 5.72],
+            ["Veggie", 4.22],
+          ],
+        },
+        Breakfast: {
+          n: "Served from 7 AM.",
+          i: [
+            ["Migas taco", 4.11],
+            ["Potato, egg and cheese", 4.11],
+            ["Bacon, egg and cheese", 4.11],
+            ["Chorizo, egg and cheese", 4.11],
+            ["Ham, egg and cheese", 4.11],
+            ["Beans, egg and cheese", 4.11],
+            ["Spinach, egg and cheese", 4.11],
+            ["Breakfast burrito", 8.6],
+            ["Breakfast sandwich", 9.1],
+            ["French toast plate", 10.4],
+            ["Pancake plate", 10.4],
+            ["Beef fajita omelette", 13.0],
+            ["Veggie omelette", 13.0],
+          ],
+        },
+        "Burritos and tortas": {
+          n: "Market price means ask at the truck.",
+          i: [
+            ["Burrito carnitas", 13.35],
+            ["Burrito suadero", 14.35],
+            ["Burrito beef fajita", 14.35],
+            ["Burrito tripa", 14.48],
+            ["Torta universal lengua", 17.35],
+            ["Torta del Chavo", "Market"],
+            ["Michoacana burger", "Market"],
+            ["Menudo", 19.85],
+          ],
+        },
+        "Aguas frescas": {
+          n: "Made in house. Mexican sodas also available.",
+          i: [
+            ["Jamaica (hibiscus)", 5.46],
+            ["Tamarindo", 5.46],
+            ["Melon (cantaloupe)", 5.46],
+            ["Piña (pineapple)", 5.46],
+            ["Sandía (watermelon)", 5.46],
+          ],
+        },
+      };
+      const tabs = document.getElementById("tabs"),
+        panel = document.getElementById("panel");
+      const keys = Object.keys(MENU);
+      function show(k, focus) {
+        [...tabs.children].forEach((b) => {
+          const on = b.dataset.k === k;
+          b.setAttribute("aria-selected", on);
+          b.tabIndex = on ? 0 : -1;
+          if (on && focus) b.focus();
+        });
+        const m = MENU[k];
+        panel.className = "panel";
+        void panel.offsetWidth;
+        panel.className = "panel fade";
+        panel.innerHTML =
+          m.i
+            .map(
+              ([a, p]) =>
+                `<div class="row"><span>${a}</span><span class="d"></span><span class="p">${typeof p === "number" ? "$" + p.toFixed(2) : p}</span></div>`,
+            )
+            .join("") + `<p class="note">${m.n}</p>`;
+        panel.setAttribute("aria-label", k);
+      }
+      keys.forEach((k) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.role = "tab";
+        b.textContent = k;
+        b.dataset.k = k;
+        b.onclick = () => show(k);
+        tabs.appendChild(b);
+      });
+      tabs.addEventListener("keydown", (e) => {
+        const i = keys.indexOf(document.activeElement.dataset.k);
+        if (i < 0) return;
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          show(keys[(i + 1) % keys.length], 1);
+        }
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          show(keys[(i + keys.length - 1) % keys.length], 1);
+        }
+      });
+      show(keys[0]);
+
+      /* Hours: day 0=Sunday. Times in minutes; close past 1440 runs into next morning. Unverified. */
+      const H = [
+        [480, 1500],
+        [420, 1500],
+        [420, 1500],
+        [420, 1500],
+        [420, 1500],
+        [420, 1620],
+        [420, 1620],
+      ];
+      const D = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const fmt = (m) => {
+        m %= 1440;
+        const h = Math.floor(m / 60),
+          mm = m % 60,
+          ap = h >= 12 ? "PM" : "AM";
+        return (
+          (h % 12 || 12) +
+          (mm ? ":" + String(mm).padStart(2, "0") : "") +
+          " " +
+          ap
+        );
+      };
+      const tbl = document.getElementById("hours");
+      tbl.insertAdjacentHTML(
+        "beforeend",
+        D.map(
+          (d, i) =>
+            `<tr data-d="${i}"><th scope="row">${d}</th><td>${fmt(H[i][0])} to ${fmt(H[i][1])}</td></tr>`,
+        ).join(""),
+      );
+      function austin() {
+        const p = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Chicago",
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+          weekday: "long",
+        }).formatToParts(new Date());
+        const g = (t) => p.find((x) => x.type === t).value;
+        return {
+          day: D.indexOf(g("weekday")),
+          min: (parseInt(g("hour")) % 24) * 60 + parseInt(g("minute")),
+        };
+      }
+      function status() {
+        const { day, min } = austin();
+        let open = null;
+        if (min >= H[day][0] && min < H[day][1]) open = H[day][1];
+        else {
+          const pd = (day + 6) % 7;
+          if (H[pd][1] > 1440 && min + 1440 < H[pd][1]) open = H[pd][1] - 1440;
+        }
+        const b = document.getElementById("badge");
+        b.classList.toggle("on", open !== null);
+        document.getElementById("badgeText").textContent =
+          open !== null
+            ? "Open now, until " + fmt(open)
+            : "Closed, opens " +
+              (min < H[day][0] ? "today" : "tomorrow") +
+              " at " +
+              fmt(min < H[day][0] ? H[day][0] : H[(day + 1) % 7][0]);
+        document.getElementById("todayHours").textContent =
+          "Today: " + fmt(H[day][0]) + " to " + fmt(H[day][1]);
+        tbl
+          .querySelectorAll("tr")
+          .forEach((r) => r.classList.toggle("today", +r.dataset.d === day));
+      }
+      status();
+      setInterval(status, 60000);
+
+      /* Text-order form: composes a real SMS. No backend. */
+      document.getElementById("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const n = e.target.n.value.trim(),
+          o = e.target.o.value.trim(),
+          m = document.getElementById("msg");
+        if (!n || !o) {
+          m.textContent = "Add your name and what you need, then try again.";
+          return;
+        }
+        const body = encodeURIComponent(
+          `Hi Tacos Las Amazonas, this is ${n}. ${o}`,
+        );
+        m.textContent =
+          "Opening your messaging app. If nothing opens, call (512) 210-6855.";
+        location.href = "sms:+15122106855?&body=" + body;
+      });
+
+      /* Scroll reveal */
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (es) =>
+            es.forEach((x) => {
+              if (x.isIntersecting) {
+                x.target.classList.add("in");
+                io.unobserve(x.target);
+              }
+            }),
+          { threshold: 0.12 },
+        );
+        document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+      } else
+        document
+          .querySelectorAll(".rv")
+          .forEach((el) => el.classList.add("in"));
+    </script>
+  </body>
+</html>
